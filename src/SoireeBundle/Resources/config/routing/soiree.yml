@@ -1,0 +1,24 @@
+soiree_index:
+    path:     /
+    defaults: { _controller: "SoireeBundle:Soiree:index" }
+    methods:  GET
+
+soiree_show:
+    path:     /{id}/show
+    defaults: { _controller: "SoireeBundle:Soiree:show" }
+    methods:  GET
+
+soiree_new:
+    path:     /new
+    defaults: { _controller: "SoireeBundle:Soiree:new" }
+    methods:  [GET, POST]
+
+soiree_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SoireeBundle:Soiree:edit" }
+    methods:  [GET, POST]
+
+soiree_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SoireeBundle:Soiree:delete" }
+    methods:  DELETE

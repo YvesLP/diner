@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Soiree</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ soiree.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ soiree.nom }}</td>
+            </tr>
+            <tr>
+                <th>Datesoiree</th>
+                <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Photosoiree</th>
+                <td>{{ soiree.photoSoiree }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('soiree_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('soiree_edit', { 'id': soiree.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
