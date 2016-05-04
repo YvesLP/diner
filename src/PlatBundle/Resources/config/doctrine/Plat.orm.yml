@@ -1,0 +1,32 @@
+PlatBundle\Entity\Plat:
+    type: entity
+    table: null
+    repositoryClass: PlatBundle\Repository\PlatRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: '50'
+            unique: true
+            column: Nom
+        ingredients:
+            type: string
+            length: 255
+            nullable: true
+            column: Ingredients
+        recette:
+            type: string
+            length: 255
+            nullable: true
+            column: Recette
+        photoPlat:
+            type: string
+            length: 255
+            nullable: true
+            column: PhotoPlat
+    lifecycleCallbacks: {  }

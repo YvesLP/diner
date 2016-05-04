@@ -1,0 +1,25 @@
+SoireeBundle\Entity\Soiree:
+    type: entity
+    table: null
+    repositoryClass: SoireeBundle\Repository\SoireeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: '50'
+            unique: true
+            column: Nom
+        dateSoiree:
+            type: date
+            column: DateSoiree
+        photoSoiree:
+            type: string
+            length: 255
+            nullable: true
+            column: PhotoSoiree
+    lifecycleCallbacks: {  }

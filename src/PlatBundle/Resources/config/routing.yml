@@ -1,0 +1,3 @@
+plat_homepage:
+    path:     /
+    defaults: { _controller: PlatBundle:Default:index }

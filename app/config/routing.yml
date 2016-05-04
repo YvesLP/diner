@@ -1,0 +1,18 @@
+soiree:
+    resource: "@SoireeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+plat:
+    resource: "@PlatBundle/Resources/config/routing.yml"
+    prefix:   /
+
+util:
+    resource: "@UtilBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
