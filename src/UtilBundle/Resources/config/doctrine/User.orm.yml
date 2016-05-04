@@ -1,0 +1,26 @@
+# src/UtilBundle/Resources/config/doctrine/User.orm.yml
+UtilBundle\Entity\User:
+    type:  entity
+    table: fos_user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        allergies:
+            type: string
+            length: 255
+            nullable: true
+            column: Allergies
+        gouts:
+            type: string
+            length: 255
+            nullable: true
+            column: Gouts
+        photoUtil:
+            type: string
+            length: 255
+            nullable: true
+            column: PhotoUtil
+    lifecycleCallbacks: {  }
