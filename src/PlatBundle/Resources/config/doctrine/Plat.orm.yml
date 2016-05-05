@@ -1,6 +1,6 @@
 PlatBundle\Entity\Plat:
     type: entity
-    table: null
+    table: plat
     repositoryClass: PlatBundle\Repository\PlatRepository
     id:
         id:

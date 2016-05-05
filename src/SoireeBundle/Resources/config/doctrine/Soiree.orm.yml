@@ -1,6 +1,6 @@
 SoireeBundle\Entity\Soiree:
     type: entity
-    table: null
+    table: soiree
     repositoryClass: SoireeBundle\Repository\SoireeRepository
     id:
         id:
@@ -22,4 +22,10 @@ SoireeBundle\Entity\Soiree:
             length: 255
             nullable: true
             column: PhotoSoiree
+    manyToOne:
+      plat_id:
+        targetEntity: PlatBundle\Entity\Plat
+        joinColumn:
+          name: Plat_id
+          referencedColumnName: id
     lifecycleCallbacks: {  }
