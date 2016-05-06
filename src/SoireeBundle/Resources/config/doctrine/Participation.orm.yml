@@ -1,0 +1,22 @@
+SoireeBundle\Entity\Participation:
+    type: entity
+    table: null
+    repositoryClass: SoireeBundle\Repository\ParticipationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        user:
+            targetEntity: UtilBundle\Entity\User
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+        party:
+            targetEntity: SoireeBundle\Entity\Soiree
+            joinColumn:
+                name: soiree_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

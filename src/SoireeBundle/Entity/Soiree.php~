@@ -108,4 +108,32 @@ class Soiree
     {
         return $this->photoSoiree;
     }
+    /**
+     * @var \PlatBundle\Entity\Plat
+     */
+    private $plat_id;
+
+
+    /**
+     * Set plat_id
+     *
+     * @param \PlatBundle\Entity\Plat $platId
+     * @return Soiree
+     */
+    public function setPlatId(\PlatBundle\Entity\Plat $platId = null)
+    {
+        $this->plat_id = $platId;
+
+        return $this;
+    }
+
+    /**
+     * Get plat_id
+     *
+     * @return \PlatBundle\Entity\Plat 
+     */
+    public function getPlatId()
+    {
+        return $this->plat_id;
+    }
 }
