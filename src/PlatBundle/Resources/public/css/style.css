@@ -1,0 +1,38 @@
+body {
+
+}
+
+nav {
+    background-color: darkgray;
+    height: 60px;
+}
+
+.nav_header ul{
+    text-align: center;
+    padding-left: 0;
+    background: url("web/bundles/frameworks/images/logo_symfony.png");
+}
+
+.nav_header li{
+    list-style-type: none;
+    display: inline-block;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 6px;
+    padding-left: 9px;
+    padding-right: 9px;
+    font-size: 25px;
+}
+
+footer{
+    background: #000;
+    height: 92px;
+    width: 100%;
+    color: #448A22;
+    clear: both;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding: 15px;
+    position:absolute;
+    bottom:0px;
+}

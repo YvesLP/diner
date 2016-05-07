@@ -1,1 +1,18 @@
-Hello World!
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="nav_header">
+        <nav>
+            <ul>
+                <li><a href="{{ path("plat_index") }}" title="Télécharger">Plat</a></li>
+                <li><a href="{{ path("soiree_index") }}" title="Télécharger">Soiree</a></li>
+                <li><a href="{{ path("soiree_index") }}" title="Télécharger">Invités</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <footer>
+        <p>© 2015 Copyright Repas | <strong><span class="diff">Mentions légales</span></strong></p>
+    </footer>
+{% endblock %}
