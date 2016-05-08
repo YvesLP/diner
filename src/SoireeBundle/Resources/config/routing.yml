@@ -4,4 +4,4 @@ soiree_soiree:
 
 soiree_participation:
     resource: "@SoireeBundle/Resources/config/routing/participation.yml"
-    prefix:  /participation
+    prefix:   /participation

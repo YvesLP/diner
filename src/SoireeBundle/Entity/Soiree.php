@@ -28,6 +28,11 @@ class Soiree
      * @var string
      */
     private $photoSoiree;
+    
+    /**
+     * @var \PlatBundle\Entity\Plat
+     */
+    private $plat_id;
 
 
     /**
@@ -108,10 +113,6 @@ class Soiree
     {
         return $this->photoSoiree;
     }
-    /**
-     * @var \PlatBundle\Entity\Plat
-     */
-    private $plat_id;
 
 
     /**
@@ -130,7 +131,7 @@ class Soiree
     /**
      * Get plat_id
      *
-     * @return \PlatBundle\Entity\Plat 
+     * @return \PlatBundle\Entity\Plat
      */
     public function getPlatId()
     {

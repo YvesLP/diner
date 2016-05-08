@@ -1,6 +1,6 @@
 SoireeBundle\Entity\Participation:
     type: entity
-    table: null
+    table: participation
     repositoryClass: SoireeBundle\Repository\ParticipationRepository
     id:
         id:

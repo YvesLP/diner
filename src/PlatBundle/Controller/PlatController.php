@@ -61,7 +61,7 @@ class PlatController extends Controller
     {
         $deleteForm = $this->createDeleteForm($plat);
 
-        return $this->render('PlatBundle:Plat:show.html.twig', array(
+        return $this->render('PlatBundle:plat:show.html.twig', array(
             'plat' => $plat,
             'delete_form' => $deleteForm->createView(),
         ));
