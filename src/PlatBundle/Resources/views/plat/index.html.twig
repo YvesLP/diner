@@ -1,8 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Plat list</h1>
+    <!--<h1>RIZ</h1>-->
 
+    <!-- Navbar principale -->
+    <div class="nav_header" xmlns="http://www.w3.org/1999/html">
+        <nav>
+            <ul>
+                <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
+                <li><a href="{{ path("plat_index") }}" title="Télécharger">Plat</a></li>
+                <li><a href="{{ path("soiree_index") }}" title="Télécharger">Soiree</a></li>
+                <li><a href="{{ path("participation_index") }}" title="Télécharger">Participation</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Fin Navbar principale -->
+
+    <div>
+        <img src="http://images.google.fr/imgres?imgurl=http%3A%2F%2Fimg.over-blog-kiwi.com%2F0%2F98%2F03%2F83%2F20151021%2Fob_a8d711_nourriture-viande-barbecue.jpg&imgrefurl=http%3A%2F%2Flemondedesgifs.over-blog.com%2Ftag%2Fwallpapers%2F28&h=750&w=1200&tbnid=9LOQhXQEf1xubM%3A&docid=plxSqt2TEtY6sM&ei=FFQuV8ezFYGQUdD4pIgI&tbm=isch&client=ubuntu&iact=rc&uact=3&dur=486&page=1&start=0&ndsp=14&ved=0ahUKEwjHjc7T6sjMAhUBSBQKHVA8CYEQMwgiKAMwAw&bih=617&biw=1193" alt=""/>
+    </div>
+    <!-- Nom des entity -->
     <table>
         <thead>
             <tr>
@@ -10,11 +27,12 @@
                 <th>Nom</th>
                 <th>Ingredients</th>
                 <th>Recette</th>
-                <th>Photoplat</th>
+                <th>Photos</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
+
         {% for plat in plats %}
             <tr>
                 <td><a href="{{ path('plat_show', { 'id': plat.id }) }}">{{ plat.id }}</a></td>
@@ -42,4 +60,10 @@
             <a href="{{ path('plat_new') }}">Create a new entry</a>
         </li>
     </ul>
+
+    <!-- Début footer -->
+    <footer>
+        <p>© 2016 Copyright Party Caroline | <strong><span class="diff">Mentions légales</span></strong></p>
+    </footer>
+    <!-- Fin footer -->
 {% endblock %}
