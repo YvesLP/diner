@@ -3,7 +3,7 @@ body {
 }
 
 nav {
-    background-color: darkgray;
+    background-color: black;
     height: 60px;
 }
 
@@ -22,6 +22,11 @@ nav {
     padding-left: 9px;
     padding-right: 9px;
     font-size: 25px;
+}
+
+tr {
+    text-align: right;
+    color: red;
 }
 
 footer{

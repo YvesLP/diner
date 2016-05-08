@@ -2,42 +2,102 @@
 
 {% block body %}
 
-    <div class="nav_header">
+    <!-- Début barnav principale -->
+
+    <div class="nav_header" xmlns="http://www.w3.org/1999/html">
         <nav>
             <ul>
+                <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
                 <li><a href="{{ path("plat_index") }}" title="Télécharger">Plat</a></li>
                 <li><a href="{{ path("soiree_index") }}" title="Télécharger">Soiree</a></li>
-                <li><a href="{{ path("participation_index") }}" title="Télécharger">Invités</a></li>
                 <li><a href="{{ path("participation_index") }}" title="Télécharger">Participation</a></li>
             </ul>
         </nav>
     </div>
-        <h1>Soirée de Caroline</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-xs-6 test">
-                    <p>
-                        Qu'est-ce que le Lorem Ipsum?
 
-                        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
-                    </p>
-                </div>
+    <!-- Fin barnav principale -->
+
+    <!-- Début du parralax avec texte et image -->
+
+    <div id="main">
+        <header >
+
+            <!-- Début de l'animation de txt dans header-->
+
+            <div class="body">
+                <<svg width="100%" height="100%" viewBox="30 -50 600 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                    <path id="path">
+                        <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/>
+                    </path>
+                    <text font-size="26" font-family="Montserrat" fill='hsla(36, 95%, 85%, 1)'>
+                        <textPath xlink:href="#path">Welcome everybody to the party Black & Night.
+                        </textPath>
+                    </text>
+                </svg>
             </div>
-            <img src="web/images/food.jpg" alt="Search on Symfony website" />
-            <div class="row">
-                <div class="col-md-6 col-xs-6 test1">
-                    <p>
-                        D'où vient-il?
 
-                        Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de la section 1.10.32.
+            <!-- Fin de l'animation de txt dans header -->
+        </header>
 
-                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour les curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont aussi reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham (1914).
-                    </p>
-                </div>
+        <!-- Début des effets parralax -->
+
+        <div class="container" style="padding-top:100px;padding-bottom:100px">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur sed enim in mollis. Proin molestie libero id congue hendrerit. In hac habitasse platea dictumst. Aenean augue libero, scelerisque id sagittis et, tristique nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam congue maximus efficitur. Fusce malesuada, magna eu porttitor fermentum, lorem arcu fermentum mi, porta faucibus lorem mauris sed felis. Curabitur dignissim risus quam, rutrum congue tellus aliquet sit amet. Cras luctus ac lectus non sollicitudin. Sed dolor metus, tempor eleifend orci et, laoreet vulputate orci. </p>
+        </div>
+    </div>
+    </div>
+    <section class="fullwidth">
+        <div class="paralax1" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-bottom-top="background-position: 50% 100px;">
+            <div class="paralaxtext" data-bottom-top=" opacity:0; transform[swing]:scale(0.5) " data-top=" opacity:1; transform[swing]:scale(1) ">
+                <h2 style="color:white"> Food</h2>
             </div>
         </div>
-    <footer>
-        <p>© 2015 Copyright Repas | <strong><span class="diff">Mentions légales</span></strong></p>
-    </footer>
+    </section>
+    <div class="container" style="padding-top:100px;padding-bottom:100px">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur sed enim in mollis. Proin molestie libero id congue hendrerit. In hac habitasse platea dictumst. Aenean augue libero, scelerisque id sagittis et, tristique nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam congue maximus efficitur. Fusce malesuada, magna eu porttitor fermentum, lorem arcu fermentum mi, porta faucibus lorem mauris sed felis. Curabitur dignissim risus quam, rutrum congue tellus aliquet sit amet. Cras luctus ac lectus non sollicitudin. Sed dolor metus, tempor eleifend orci et, laoreet vulputate orci. </p>
+    </div>
+    <section class="fullwidth">
+        <div class="paralax2" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-bottom-top="background-position: 50% 100px;">
+            <div class="paralaxtext">
+                <h2 style="color:white" data-bottom-top="letter-spacing: 10px;" data-top="letter-spacing: 20px; "> Cocktails </h2>
+            </div>
+    </section>
+    <div class="container" style="padding-top:100px;padding-bottom:100px">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur sed enim in mollis. Proin molestie libero id congue hendrerit. In hac habitasse platea dictumst. Aenean augue libero, scelerisque id sagittis et, tristique nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam congue maximus efficitur. Fusce malesuada, magna eu porttitor fermentum, lorem arcu fermentum mi, porta faucibus lorem mauris sed felis. Curabitur dignissim risus quam, rutrum congue tellus aliquet sit amet. Cras luctus ac lectus non sollicitudin. Sed dolor metus, tempor eleifend orci et, laoreet vulputate orci. </p>
+    </div>
+    <section class="fullwidth">
+        <div class="paralax3" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-bottom-top="background-position: 50% 100px;">
+            <div class="paralaxtext"
+                 data-bottom-top="transform[bounce]:scale(0.5);" data-top="transform[bounce]:scale(1)"
+            >
+                <h2 style="color:white">I REALLY LOVE DANCE </h2>
+            </div>
+    </section>
+    <div class="container" style="padding-top:100px;padding-bottom:100px">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur sed enim in mollis. Proin molestie libero id congue hendrerit. In hac habitasse platea dictumst. Aenean augue libero, scelerisque id sagittis et, tristique nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam congue maximus efficitur. Fusce malesuada, magna eu porttitor fermentum, lorem arcu fermentum mi, porta faucibus lorem mauris sed felis. Curabitur dignissim risus quam, rutrum congue tellus aliquet sit amet. Cras luctus ac lectus non sollicitudin. Sed dolor metus, tempor eleifend orci et, laoreet vulputate orci. </p>
+    </div>
+    <br>
 
+    <br> <br> <br>
+    <a target="_blank"> CAROLINE PARTY </a>
+    <br> <br> <br> <br>
+    </div>
+    </div>
+    <!-- Fin des effets parralax -->
+
+    <!-- Appel de script pour le parralax -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://arielbeninca.com/Storage/skrollr.min.js"></script>
+    <script type="text/javascript">var s=skrollr.init({forceHeight:false});</script>
+    <script type="text/javascript" src="{{ asset("js/jquery.min.js") }}"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Fin appel de script parralax -->
+
+    <!-- Début footer -->
+    <footer>
+        <p>© 2016 Copyright Party Caroline | <strong><span class="diff">Mentions légales</span></strong></p>
+    </footer>
+    <!-- Fin footer -->
 {% endblock %}
