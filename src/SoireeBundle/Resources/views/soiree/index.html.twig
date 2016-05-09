@@ -19,8 +19,10 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Soirées</th>
                 <th>Dates</th>
                 <th>Photos</th>
+                <th>Plats</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -31,6 +33,7 @@
                 <td>{{ soiree.nom }}</td>
                 <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ soiree.photoSoiree }}</td>
+                <td>{{ soiree.platId.nom }}</td>
                 <td>
                     <ul>
                         <li>
@@ -51,7 +54,7 @@
                     <li class="pusher"></li>
                     <li>
                         <div>
-                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS2628hKf2UGzjTlgoL2PQqZZx2cfPQTas68JoMT06jasKxn1yrBA    " alt=""/>
+                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS2628hKf2UGzjTlgoL2PQqZZx2cfPQTas68JoMT06jasKxn1yrBA" alt=""/>
                             <h1>Black & White</h1>
                             <p>Some sample text about the article this hexagon leads to</p>
                         </div>

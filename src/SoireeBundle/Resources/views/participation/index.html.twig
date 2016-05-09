@@ -1,62 +1,21 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
-    <div class="nav_header" xmlns="http://www.w3.org/1999/html">
-        <nav>
-            <ul>
-                <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
-                <li><a href="{{ path("plat_index") }}" title="Télécharger">Plat</a></li>
-                <li><a href="{{ path("soiree_index") }}" title="Télécharger">Soiree</a></li>
-                <li><a href="{{ path("participation_index") }}" title="Télécharger">Participation</a></li>
-            </ul>
-        </nav>
-    </div>
-    <!-- En cour d'essai
-    <div class="texte">
-        <div class="container">
-            <div class="header">
-                <div class="clr"></div>
-            </div>
-            <div class="sp-container">
-                <div class="sp-content">
-                    <div class="sp-globe"></div>
-                    <h2 class="frame-1">Party Black & Night</h2>
-
-                    <h2 class="frame-2">Names of participants</h2>
-
-                    <h2 class="frame-3">You can stop it</h2>
-
-                    <h2 class="frame-4">Now!</h2>
-
-                    <h2 class="frame-5"><span>If you continue</span> <span>Love life.</span> <span>Go have fun.</span></h2>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
     <h1>Participation list</h1>
 
-    <script type="text/javascript" src="/path/to/shared/js/EventHelpers.js">
-    </script>
-    <script type="text/javascript" src="/path/to/shared/js/cssQuery-p.js">
-    </script>
-    <script type="text/javascript" src="/path/to/shared/js/jcoglan.com/sylvester.js">
-    </script>
-    <script type="text/javascript" src="/path/to/shared/js/cssSandpaper.js">
-    </script>
     <table>
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Participant</th>
+                <th>Soirée</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for participation in participations %}
             <tr>
-                <td><a href="{{ path('participation_show', { 'id': participation.id }) }}">{{ participation.id }}</a></td>
+                <td>{{ participation.participant.username }}</td>
+                <td>{{ participation.soiree.nom }}</td>
                 <td>
                     <ul>
                         <li>
@@ -68,10 +27,7 @@
                     </ul>
                 </td>
             </tr>
-
-
-
-                {% endfor %}
+        {% endfor %}
         </tbody>
     </table>
 
@@ -80,7 +36,4 @@
             <a href="{{ path('participation_new') }}">Create a new entry</a>
         </li>
     </ul>
-    <footer>
-        <p>© 2016 Copyright Party Caroline | <strong><span class="diff">Mentions légales</span></strong></p>
-    </footer>
 {% endblock %}

@@ -7,77 +7,80 @@ namespace SoireeBundle\Entity;
  */
 class Participation
 {
+
+    // GENERATED CODE
+
     /**
-     * @var int
+     * @var integer
      */
     private $id;
+
+    /**
+     * @var \UtilBundle\Entity\User
+     */
+    private $participant;
+
+    /**
+     * @var \SoireeBundle\Entity\Soiree
+     */
+    private $soiree;
 
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
         return $this->id;
     }
-    /**
-     * @var \UtilBundle\Entity\User
-     */
-    private $user;
 
     /**
-     * @var \SoireeBundle\Entity\Soiree
-     */
-    private $party;
-
-
-    /**
-     * Set user
+     * Set participant
      *
-     * @param \UtilBundle\Entity\User $user
+     * @param \UtilBundle\Entity\User $participant
      *
      * @return Participation
      */
-    public function setUser(\UtilBundle\Entity\User $user = null)
+    public function setParticipant(\UtilBundle\Entity\User $participant = null)
     {
-        $this->user = $user;
+        $this->participant = $participant;
 
         return $this;
     }
 
     /**
-     * Get user
+     * Get participant
      *
      * @return \UtilBundle\Entity\User
      */
-    public function getUser()
+    public function getParticipant()
     {
-        return $this->user;
+        return $this->participant;
     }
 
     /**
-     * Set party
+     * Set soiree
      *
-     * @param \SoireeBundle\Entity\Soiree $party
+     * @param \SoireeBundle\Entity\Soiree $soiree
      *
      * @return Participation
      */
-    public function setParty(\SoireeBundle\Entity\Soiree $party = null)
+    public function setSoiree(\SoireeBundle\Entity\Soiree $soiree = null)
     {
-        $this->party = $party;
+        $this->soiree = $soiree;
 
         return $this;
     }
 
     /**
-     * Get party
+     * Get soiree
      *
      * @return \SoireeBundle\Entity\Soiree
      */
-    public function getParty()
+    public function getSoiree()
     {
-        return $this->party;
+        return $this->soiree;
     }
 }

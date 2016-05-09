@@ -18,6 +18,7 @@ class SoireeType extends AbstractType
             ->add('nom')
             ->add('dateSoiree', 'date')
             ->add('photoSoiree')
+            ->add('plat_id')
         ;
     }
     
