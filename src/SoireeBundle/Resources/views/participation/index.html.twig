@@ -1,6 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <div class="nav_header" xmlns="http://www.w3.org/1999/html">
+        <nav>
+            <ul>
+                <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
+                <li><a href="{{ path("plat_index") }}" title="Télécharger">Plat</a></li>
+                <li><a href="{{ path("soiree_index") }}" title="Télécharger">Soiree</a></li>
+                <li><a href="{{ path("participation_index") }}" title="Télécharger">Participation</a></li>
+            </ul>
+        </nav>
+    </div>
     <h1>Participation list</h1>
 
     <table>
@@ -36,4 +46,7 @@
             <a href="{{ path('participation_new') }}">Create a new entry</a>
         </li>
     </ul>
+    <footer>
+        <p>© 2016 Copyright Party Caroline | <strong><span class="diff">Mentions légales</span></strong></p>
+    </footer>
 {% endblock %}
