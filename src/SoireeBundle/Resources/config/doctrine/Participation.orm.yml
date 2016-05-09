@@ -9,12 +9,12 @@ SoireeBundle\Entity\Participation:
             generator:
                 strategy: AUTO
     manyToOne:
-        user:
+        participant:
             targetEntity: UtilBundle\Entity\User
             joinColumn:
                 name: user_id
                 referencedColumnName: id
-        party:
+        soiree:
             targetEntity: SoireeBundle\Entity\Soiree
             joinColumn:
                 name: soiree_id

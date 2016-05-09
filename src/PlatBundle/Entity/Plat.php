@@ -9,6 +9,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Plat
 {
+    public function __toString()
+    {
+        return $this->getNom();
+    }
+
+    // GENERATED CODE
+
     /**
      * @var int
      */

@@ -4,10 +4,18 @@
     <h1>Participation</h1>
 
     <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Participant</th>
+                <th>Soirée</th>
+            </tr>
+        </thead>
         <tbody>
             <tr>
-                <th>Id</th>
                 <td>{{ participation.id }}</td>
+                <td>{{ participation.participant.username }}</td>
+                <td>{{ participation.soiree.nom }}</td>
             </tr>
         </tbody>
     </table>

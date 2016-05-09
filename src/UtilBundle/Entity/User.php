@@ -19,6 +19,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class User extends BaseUser
 {
+    public function __toString()
+    {
+        return $this->getUsername();
+    }
+
+    // GENERATED CODE
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
