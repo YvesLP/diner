@@ -9,6 +9,36 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Soiree
 {
+
+    public $phsoiree;
+
+    public function __toString()
+    {
+        return $this->getNom();
+    }
+
+    protected function getUploadDir()
+    {
+        return 'uploads/photosdesoirees';
+    }
+
+    protected function getUploadRootDir()
+    {
+        return __DIR__.'/../../../web/'.$this->getUploadDir();
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->photoSoiree ? null : $this->getUploadDir().'/'.$this->photoSoiree;
+    }
+
+    public function getAbsolutePath()
+    {
+        return null === $this->photoSoiree ? null : $this->getUploadRootDir().'/'.$this->photoSoiree;
+    }
+    
+    // GENERATED CODE
+    
     /**
      * @var int
      */
@@ -28,6 +58,11 @@ class Soiree
      * @var string
      */
     private $photoSoiree;
+    
+    /**
+     * @var \PlatBundle\Entity\Plat
+     */
+    private $plat_id;
 
 
     /**
@@ -108,10 +143,6 @@ class Soiree
     {
         return $this->photoSoiree;
     }
-    /**
-     * @var \PlatBundle\Entity\Plat
-     */
-    private $plat_id;
 
 
     /**
@@ -130,7 +161,7 @@ class Soiree
     /**
      * Get plat_id
      *
-     * @return \PlatBundle\Entity\Plat 
+     * @return \PlatBundle\Entity\Plat
      */
     public function getPlatId()
     {

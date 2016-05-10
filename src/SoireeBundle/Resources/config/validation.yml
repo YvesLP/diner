@@ -1,0 +1,5 @@
+# src/SoireeBundle/Resources/config/validation.yml
+SoireeBundle\Entity\Author:
+    properties:
+        phsoiree:
+            - Image: ~

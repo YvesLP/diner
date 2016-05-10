@@ -9,11 +9,106 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Soiree
 {
+
+    public $phsoiree;
+
     public function __toString()
     {
         return $this->getNom();
     }
-    
+
+    protected function getUploadDir()
+    {
+        return 'uploads/photosdesoirees';
+    }
+
+    protected function getUploadRootDir()
+    {
+        return __DIR__.'/../../../web/'.$this->getUploadDir();
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->photoSoiree ? null : $this->getUploadDir().'/'.$this->photoSoiree;
+    }
+
+    public function getAbsolutePath()
+    {
+        return null === $this->photoSoiree ? null : $this->getUploadRootDir().'/'.$this->photoSoiree;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function preUpload()
+    {
+        if (null !== $this->photoSoiree) {
+            // do whatever you want to generate a unique name
+            $this->photoSoiree = uniqid().'.'.$this->photoSoiree->guessExtension();
+        }
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function setExpiresAtValue()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function preUpdate()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function setUpdatedAtValue()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PostPersist
+     */
+    public function upload()
+    {
+        // Add your code here
+        if (null === $this->photoSoiree) {
+            return;
+        }
+
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->photoSoiree->move($this->getUploadRootDir(), $this->photoSoiree);
+
+        unset($this->photoSoiree);
+    }
+
+    /**
+     * @ORM\PostRemove
+     */
+    public function removeUpload()
+    {
+        // Add your code here
+        if ($phsoiree = $this->getAbsolutePath()) {
+            unlink($phsoiree);
+        }
+    }
+
     // GENERATED CODE
     
     /**

@@ -17,7 +17,7 @@ class SoireeType extends AbstractType
         $builder
             ->add('nom')
             ->add('dateSoiree', 'date')
-            ->add('photoSoiree')
+            ->add('phsoiree', 'file', array('label' => 'Photo Soirée', 'required' => false))
             ->add('plat_id')
         ;
     }

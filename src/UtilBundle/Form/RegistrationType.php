@@ -1,13 +1,11 @@
 <?php
+// src/UtilBundle/Form/RegistrationType.php
 /**
  * Created by PhpStorm.
  * User: charlie
  * Date: 09/05/16
  * Time: 16:40
  */
-
-// src/UtilBundle/Form/RegistrationType.php
-
 namespace UtilBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
@@ -36,12 +34,18 @@ class RegistrationType extends AbstractType
     }
 
     // For Symfony 2.x
+
     public function getGouts()
     {
         return $this->getBlockPrefix();
     }
 
     public function getAllergies()
+    {
+        return $this->getBlockPrefix();
+    }
+
+    public function getPhotoUtil()
     {
         return $this->getBlockPrefix();
     }
