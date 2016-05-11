@@ -20,3 +20,4 @@ SoireeBundle\Entity\Participation:
                 name: soiree_id
                 referencedColumnName: id
     lifecycleCallbacks: {  }
+
