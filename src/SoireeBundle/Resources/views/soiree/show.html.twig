@@ -10,20 +10,21 @@
                 <td>{{ soiree.id }}</td>
             </tr>
             <tr>
-                <th>Nom</th>
+                <th>Nom de la soirée</th>
                 <td>{{ soiree.nom }}</td>
             </tr>
             <tr>
-                <th>Datesoiree</th>
+                <th>Date de la soirée</th>
                 <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Photosoiree</th>
-                <td>{{ soiree.photoSoiree }}</td>
             </tr>
             <tr>
                 <th>Plat</th>
                 <td>{{ soiree.platId.nom }}</td>
+            </tr>
+            <tr>
+                <th>Photo de la soirée</th>
+                {#<td>{{ soiree.photoSoiree }}</td>#}
+                <td><img class="image_soiree" src="{{ asset('uploads/photosdesoirees/')}}{{ soiree.photoSoiree }}"></td>
             </tr>
         </tbody>
     </table>

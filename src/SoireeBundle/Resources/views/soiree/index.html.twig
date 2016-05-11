@@ -14,6 +14,7 @@
     <th>Nom</th>
 
     <h1>Black & White</h1>
+
     <div class="hexagone">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300,200,100,900' rel='stylesheet' type='text/css'>
@@ -101,8 +102,9 @@
                 </div>
             </li>
         </ul>
+    </div>
 
-        <table>
+    <table>
         <thead>
             <tr>
                 <th>Id</th>
@@ -114,106 +116,26 @@
             </tr>
         </thead>
         <tbody>
-        {% for soiree in soirees %}
-            <tr>
-                <td><a href="{{ path('soiree_show', { 'id': soiree.id }) }}">{{ soiree.id }}</a></td>
-                <td>{{ soiree.nom }}</td>
-                <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ soiree.photoSoiree }}</td>
-                <td>{{ soiree.platId.nom }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('soiree_show', { 'id': soiree.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('soiree_edit', { 'id': soiree.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <div class="hexagone">
-                <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>
-                <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300,200,100,900' rel='stylesheet' type='text/css'>
-                <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
-
-                <ul id="categories" class="clr">
-                    <li class="pusher"></li>
-                    <li>
-                        <div>
-                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS2628hKf2UGzjTlgoL2PQqZZx2cfPQTas68JoMT06jasKxn1yrBA" alt=""/>
-                            <h1>Black & White</h1>
-                            <p>Some sample text about the article this hexagon leads to</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRW3UCuVWmeITPsguFOcRvdssrAk1JGhZxsoqClHOo2BO4ujYU5gA" alt=""/>
-                            <h1>Black & White</h1>
-                            <p>Some sample text about the article this hexagon leads to</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg" alt=""/>
-                            <h1>Black & Whitee</h1>
-                            <p>Some sample text about the article this hexagon leads to</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg" alt=""/>
-                            <h1>Black & White</h1>
-                            <p>Some sample text about the article this hexagon leads to</p>
-                        </div>
-                    </li>
-                    <li class="pusher"></li>
-                    <li>
-                        <div>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhY6C4i_h7FpVoVA--T5OZQeX6xXy973LkgYMf9hrwZb-8aWmjDQ" alt=""/>
-                            <h1>Black & White</h1>
-                            <p>Some sample text about the article this hexagon leads to</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTcJc83ywnNtWSsyaA9nZ3xDWq08caGOSEXNC00AmbYQ6QPUUu" alt=""/>
-                            <h1>Black & White</h1>
-                            <p>Some sample text about the article this hexagon leads to</p>
-                        </div>
-                    </li>
-                    <li class="pusher"></li>
-                    <li>
-                        <div>
-                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcREulBlyhMS4ZG2GYsTfMZU0TJ3EwtR7lnXFvKl7JQXdQCyP0wa" alt=""/>
-                            <h1>Black & White</h1>
-                            <p>Some sample text about the article this hexagon leads to</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="https://farm8.staticflickr.com/7187/6895047173_d4b1a0d798.jpg" alt=""/>
-                            <h1>Black & White</h1>
-                            <p>Some sample text about the article this hexagon leads to</p>
-                        </div>
-                    </li><li>
-                        <div>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF0KfKo83wKg_hpZehgp45isKRXTTKC4ly2GJfsxykp4LrvFl1SQ" alt=""/>
-                            <h1>Black & White</h1>
-                            <p>Some sample text about the article this hexagon leads to</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="https://farm7.staticflickr.com/6139/5986939269_10721b8017.jpg" alt=""/>
-                            <h1>Black & White</h1>
-                            <p>Some sample text about the article this hexagon leads to</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        {% endfor %}
+            {% for soiree in soirees %}
+                <tr>
+                    <td><a href="{{ path('soiree_show', { 'id': soiree.id }) }}">{{ soiree.id }}</a></td>
+                    <td>{{ soiree.nom }}</td>
+                    <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>
+                    {#<td>{{ soiree.photoSoiree }}</td>#}
+                    <td><img class="image_soiree" src="{{ asset('uploads/photosdesoirees/')}}{{ soiree.photoSoiree }}"></td>
+                    <td>{{ soiree.platId.nom }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('soiree_show', { 'id': soiree.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('soiree_edit', { 'id': soiree.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 

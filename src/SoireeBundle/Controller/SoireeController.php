@@ -78,7 +78,18 @@ class SoireeController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+
             $em = $this->getDoctrine()->getManager();
+
+            if($editForm->get('phsoiree')->getData() != null) {
+                if($soiree->getPhotoSoiree() != null) {
+                    unlink(__DIR__.'/../../../web/uploads/photosdesoirees/'.$soiree->getPhotoSoiree());
+                    $soiree->setPhotoSoiree(null);
+                }
+            }
+
+            $soiree->preUpload();
+
             $em->persist($soiree);
             $em->flush();
 

@@ -42,9 +42,9 @@ class Soiree
      */
     public function preUpload()
     {
-        if (null !== $this->photoSoiree) {
+        if (null !== $this->phsoiree) {
             // do whatever you want to generate a unique name
-            $this->photoSoiree = uniqid().'.'.$this->photoSoiree->guessExtension();
+            $this->photoSoiree = uniqid().'.'.$this->phsoiree->guessExtension();
         }
     }
 
@@ -86,16 +86,16 @@ class Soiree
     public function upload()
     {
         // Add your code here
-        if (null === $this->photoSoiree) {
+        if (null === $this->phsoiree) {
             return;
         }
 
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->photoSoiree->move($this->getUploadRootDir(), $this->photoSoiree);
+        $this->phsoiree->move($this->getUploadRootDir(), $this->photoSoiree);
 
-        unset($this->photoSoiree);
+        unset($this->phsoiree);
     }
 
     /**
