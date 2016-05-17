@@ -24,8 +24,21 @@ class SoireeController extends Controller
 
         $soirees = $em->getRepository('SoireeBundle:Soiree')->findAll();
 
+        //var_dump($soirees);exit;
+
+        foreach ($soirees as $key=>$value) {
+//            echo $soirees[$key]["id"];
+//            $soirees>nbparticipants = $em->getRepository('SoireeBundle:Participation')->getNbParticipantsSoiree($key);
+            echo $key;
+//            echo $soirees[$key]->id;
+        }
+
+        $nbparticipants = $em->getRepository('SoireeBundle:Participation')->getNbParticipantsSoiree(1);
+//        var_dump($nbparticipants);exit;
+
         return $this->render('SoireeBundle:soiree:index.html.twig', array(
             'soirees' => $soirees,
+//            'nb_participants' => $nbparticipants,
         ));
     }
 

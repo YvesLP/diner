@@ -10,4 +10,22 @@ namespace SoireeBundle\Repository;
  */
 class ParticipationRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getNbParticipantsSoiree($id_soiree)
+    {
+        return $this->createQueryBuilder('id')
+            ->select('COUNT(id)')
+//            ->where('soiree_id = :idSoiree')
+//            ->setParameter('idSoiree', $id_soiree)
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
+//    public function getNbParticipantsSoiree2($id_soiree)
+//    {
+//        return $this->getEntityManager()
+//            ->createQuery(
+//                'SELECT COUNT id FROM SoireeBundle:Participation p WHERE p.soiree_id = :idSoiree'
+//            )->setParameter('idSoiree', $id_soiree)
+//            ->getResult();
+//    }
 }

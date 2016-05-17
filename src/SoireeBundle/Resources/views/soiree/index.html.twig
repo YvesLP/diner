@@ -108,10 +108,10 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Soirées</th>
-                <th>Dates</th>
-                <th>Photos</th>
-                <th>Plats</th>
+                <th>Soirée</th>
+                <th>Date</th>
+                <th>Plat</th>
+                <th>Photo</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -121,9 +121,9 @@
                     <td><a href="{{ path('soiree_show', { 'id': soiree.id }) }}">{{ soiree.id }}</a></td>
                     <td>{{ soiree.nom }}</td>
                     <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>
-                    {#<td>{{ soiree.photoSoiree }}</td>#}
-                    <td><img class="image_soiree" src="{{ asset('uploads/photosdesoirees/')}}{{ soiree.photoSoiree }}"></td>
                     <td>{{ soiree.platId.nom }}</td>
+                    {#<td>{{ soiree.photoSoiree }}</td>#}
+                    <td><img width="200px" class="image_soiree" src="{{ asset('uploads/photosdesoirees/')}}{{ soiree.photoSoiree }}"></td>
                     <td>
                         <ul>
                             <li>
