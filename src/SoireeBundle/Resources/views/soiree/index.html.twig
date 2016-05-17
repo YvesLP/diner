@@ -126,10 +126,14 @@
                     {#{{ dump(soiree.platId.nom) }}#}
                     <td>{{ soiree.platId.nom }}</td>
                     <td>{{ soiree.nbparticipants }}</td>
+                    {#{{ dump(soiree.participants) }}#}
                     <td>
-                        {% for participants in soiree %}
-                            {{ participants }}<br/>
-                        {% endfor %}
+                        {% if soiree.participants %}
+                            {% for participants in soiree.participants %}
+                                {#{{ dump(participants) }}#}
+                                {{ participants }}<br/>
+                            {% endfor %}
+                        {% endif %}
                     </td>
                     {#<td>{{ soiree.photoSoiree }}</td>#}
                     <td><img width="200px" class="image_soiree" src="{{ asset('uploads/photosdesoirees/')}}{{ soiree.photoSoiree }}"></td>
