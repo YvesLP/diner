@@ -477,19 +477,23 @@ svg{
 .X:hover div.back{
     transform:rotateX(0deg);
 }
-<<<<<<< HEAD
+
 /* Fin 3d images plat */
 
 /* debut animation image participation*/
 
+.animation {
+    height: 800px;
+}
 
-
-
+.loading {
+    text-align: center;
+}
 
 /* */
 
 /* Debut footer */
-=======
+
 /* Fin 3d images platbundle */
 
 .image_soiree {
@@ -497,7 +501,7 @@ svg{
     width: 15px;
 }
 /* Début footer */
->>>>>>> 981a07b11fbe92da1d5739c531e0c9351a15da01
+
 
 footer{
     background: #000;
@@ -512,3 +516,4 @@ footer{
 }
 
 /* Fin footer */
+
