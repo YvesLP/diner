@@ -24,21 +24,23 @@ class SoireeController extends Controller
 
         $soirees = $em->getRepository('SoireeBundle:Soiree')->findAll();
 
-        //var_dump($soirees);exit;
-
         foreach ($soirees as $key=>$value) {
-//            echo $soirees[$key]["id"];
-//            $soirees>nbparticipants = $em->getRepository('SoireeBundle:Participation')->getNbParticipantsSoiree($key);
-            echo $key;
-//            echo $soirees[$key]->id;
+            $id = $value->getId();
+            $nb_participants_par_soiree = $em->getRepository('SoireeBundle:Participation')->getNbParticipantsSoiree($id);
+            $value->nbparticipants = $nb_participants_par_soiree;
+            $participants_par_soiree = $em->getRepository('SoireeBundle:Participation')->getParticipantsSoiree($id);
+//            foreach  ($participants_par_soiree as $tpps=>$valtpps) {
+//                $idp = $valtpps;
+//                $valtpps->nomparticipant = $em->getRepository('UtilBundle:User')->getUsername($idp);
+//            }
+            $value->participants = $participants_par_soiree;
+//            var_dump($participants_par_soiree);exit;
         }
 
-        $nbparticipants = $em->getRepository('SoireeBundle:Participation')->getNbParticipantsSoiree(1);
-//        var_dump($nbparticipants);exit;
+//        var_dump($soirees);exit;
 
         return $this->render('SoireeBundle:soiree:index.html.twig', array(
             'soirees' => $soirees,
-//            'nb_participants' => $nbparticipants,
         ));
     }
 
