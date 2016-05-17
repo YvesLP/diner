@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link href="{{ asset('bundles/plats/css/style.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
 {% block body %}
     <!--<h1>RIZ</h1>-->
 
@@ -47,7 +51,8 @@
                 <td>{{ plat.nom }}</td>
                 <td>{{ plat.ingredients }}</td>
                 <td>{{ plat.recette }}</td>
-                <td>{{ plat.photoPlat }}</td>
+                {#<td>{{ plat.photoPlat }}</td>#}
+                <td><img class="image_plat" src="{{ asset('uploads/photosdeplats/')}}{{ plat.photoPlat }}"></td>
                 <td>
                     <ul>
                         <li>

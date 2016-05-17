@@ -36,79 +36,6 @@ class Plat
         return null === $this->photoPlat ? null : $this->getUploadRootDir().'/'.$this->photoPlat;
     }
 
-
-    /**
-     * @ORM\PrePersist
-     */
-    public function preUpload()
-    {
-        if (null !== $this->phplat) {
-            // do whatever you want to generate a unique name
-            $this->photoPlat = uniqid().'.'.$this->phplat->guessExtension();
-        }
-    }
-
-    /**
-     * @ORM\PrePersist
-     */
-    public function setCreatedAtValue()
-    {
-        // Add your code here
-    }
-
-    /**
-     * @ORM\PrePersist
-     */
-    public function setExpiresAtValue()
-    {
-        // Add your code here
-    }
-
-    /**
-     * @ORM\PreUpdate
-     */
-    public function preUpdate()
-    {
-        // Add your code here
-    }
-
-    /**
-     * @ORM\PreUpdate
-     */
-    public function setUpdatedAtValue()
-    {
-        // Add your code here
-    }
-
-    /**
-     * @ORM\PostPersist
-     */
-    public function upload()
-    {
-        // Add your code here
-        if (null === $this->phplat) {
-            return;
-        }
-
-        // if there is an error when moving the file, an exception will
-        // be automatically thrown by move(). This will properly prevent
-        // the entity from being persisted to the database on error
-        $this->phplat->move($this->getUploadRootDir(), $this->photoPlat);
-
-        unset($this->phplat);
-    }
-
-    /**
-     * @ORM\PostRemove
-     */
-    public function removeUpload()
-    {
-        // Add your code here
-        if ($phplat = $this->getAbsolutePath()) {
-            unlink($phplat);
-        }
-    }
-    
     // GENERATED CODE
 
     /**
@@ -238,5 +165,4 @@ class Plat
     {
         return $this->photoPlat;
     }
-
 }

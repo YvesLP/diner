@@ -1,4 +1,4 @@
-/* ensemble body pour toute les pages*/
+/* ensemble body for all pages*/
 body {
     color: #727272;
     font-family: 'Raleway',Arial,sans-serif;
@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 
-/* Ensemble des entités txt */
+/* Ensemble des ent txt */
 th {
     text-align: center;
     font-size: 20px;
@@ -21,7 +21,7 @@ td {
     text-align: center;
 }
 
-/* Fin des entités txt */
+/* Fin des ent txt */
 
 /* Barre de Nav*/
 
@@ -70,7 +70,7 @@ h2, h3 {
     line-height: 40px;
 }
 
-/* Début du parralax */
+/* Debut du parallax */
 
 .main {
     width: 100%;
@@ -111,7 +111,7 @@ header {
     padding: 100px;
 }
 
-/* Première image */
+/* First image */
 .paralax1 {
     background: url(https://images4.alphacoders.com/235/235738.jpg) 50% 0 no-repeat fixed;
     margin: 0 auto;
@@ -125,7 +125,7 @@ header {
     color: #fff;
 }
 
-/* Deuxième images */
+/* Second images */
 .paralax2 {
     background: url(http://www.1wallpaperhd.com/wp-content/uploads/Food/FTP2/2560x1440/Cocktail%20drinks%20wallpaper%2015%202560x1440.jpg) 50% 0 no-repeat fixed;
     margin: 0 auto;
@@ -139,7 +139,7 @@ header {
     color: #fff;
 }
 
-/* Troisiemes images */
+/* Third images */
 .paralax3 {
     background: url(http://blacknwhitewallpapers.com/wp-content/uploads/2015/07/celebrities-indian-celebrities-black-and-white-hrithik-roshan-dance-wallpaper-300x187.jpg) 50% 0 no-repeat fixed;
     margin: 0 auto;
@@ -153,7 +153,7 @@ header {
     color: #fff;
 }
 
-/* mouse anaimtion */
+/* mouse animation */
 
 .mouse {
     width: 22px;
@@ -181,7 +181,7 @@ header {
     animation-name: scroll;
 }
 
-/* Début Animation scroll */
+/* Debut Animation scroll */
 
 @keyframes scroll {
     0% {
@@ -253,7 +253,7 @@ svg{
 
 /* FIn animation phrase header */
 
-/* Début images en hexagone dans soirée */
+/* Debut images en image dans soiree */
 
 .hexagone{
     font-family: 'Open Sans', arial, sans-serif;
@@ -405,17 +405,17 @@ svg{
     transform: translateX(0) skewX(-45deg);
 }
 
-/* FIn images hexagone dans soirée */
+/* FIn images image dans soiree */
 
 /* 3D images platBundle */
 
 .test2{
-    width:1360px;
+    width:1400px;
     margin:50px auto;
 }
 .flip{
-    width:640px;
-    height: 320px;
+    width:650px;
+    height: 500px;
     margin:20px;
     float:left;
     position: relative;
@@ -433,7 +433,7 @@ svg{
     box-shadow: 2px 2px 20px rgba(0,0,0,.5);
 }
 .flip div.front{
-    background: url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSwn8PrOTDJS12BiM4cN5TIvkOzS7FEBDI-YK5930B7TzY_FGsp4w);
+    background: url(http://images.google.fr/imgres?imgurl=http%3A%2F%2Fwww.petitsplatsentreamis.com%2Fwp-content%2Fuploads%2F2013%2F12%2FHuitre-gratin%2525C3%2525A9e.jpg&imgrefurl=http%3A%2F%2Fwww.petitsplatsentreamis.com%2Fhuitres-gratinees-au-champagne%2F&h=683&w=1024&tbnid=Q9RQn9Wt278cWM%3A&docid=1xtIwEWiBjHdSM&ei=Xt06V_GxIJOLaqbTj7gI&tbm=isch&client=ubuntu&iact=rc&uact=3&dur=516&page=1&start=0&ndsp=15&ved=0ahUKEwjx2M6i3-DMAhWThRoKHabpA4cQMwgfKAEwAQ&bih=617&biw=1193);
     z-index: 1;
 }
 .flip div:before{
@@ -449,7 +449,7 @@ svg{
     background-color:rgba(0,0,0,.3);
 }
 .flip div.back{
-    background: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSG1w24LFM3MpctZDW0MTD_Tf_sNiqTzgDI91qxJSNuYdNJrYhY);
+    background: url(http://img.over-blog-kiwi.com/0/99/11/05/20151129/ob_93cea4_01db607bf5047f404a0a699cb4c9b19ad9404f.jpg);
     z-index: 2;
 }
 .flip:hover div.front{
@@ -476,8 +476,17 @@ svg{
 .X:hover div.back{
     transform:rotateX(0deg);
 }
-/* Fin 3d images platbundle */
-/* Début footer */
+/* Fin 3d images plat */
+
+/* debut animation image participation*/
+
+
+
+
+
+/* */
+
+/* Debut footer */
 
 footer{
     background: #000;

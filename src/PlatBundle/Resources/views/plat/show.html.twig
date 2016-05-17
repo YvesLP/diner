@@ -10,7 +10,7 @@
                 <td>{{ plat.id }}</td>
             </tr>
             <tr>
-                <th>Nom</th>
+                <th>Nom du plat</th>
                 <td>{{ plat.nom }}</td>
             </tr>
             <tr>
@@ -22,8 +22,9 @@
                 <td>{{ plat.recette }}</td>
             </tr>
             <tr>
-                <th>Photoplat</th>
-                <td>{{ plat.photoPlat }}</td>
+                <th>Photo du plat</th>
+                {#<td>{{ plat.photoPlat }}</td>#}
+                <td><img class="image_plat" src="{{ asset('uploads/photosdeplats/')}}{{ plat.photoPlat }}"></td>
             </tr>
         </tbody>
     </table>
