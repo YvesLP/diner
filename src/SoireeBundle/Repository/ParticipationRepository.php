@@ -10,15 +10,41 @@ namespace SoireeBundle\Repository;
  */
 class ParticipationRepository extends \Doctrine\ORM\EntityRepository
 {
+//    public function getNbParticipantsSoiree($id_soiree)
+//    {
+//        return $this->createQueryBuilder('id')
+//            ->select('COUNT(id)')
+//            ->where('soiree = :idSoiree')
+//            ->setParameter('idSoiree', $id_soiree)
+//            ->getQuery()
+//            ->getSingleScalarResult();
+//    }
+
     public function getNbParticipantsSoiree($id_soiree)
     {
-        return $this->createQueryBuilder('id')
-            ->select('COUNT(id)')
-//            ->where('soiree_id = :idSoiree')
-//            ->setParameter('idSoiree', $id_soiree)
-            ->getQuery()
+        return $this->getEntityManager()
+            ->createQuery('SELECT COUNT(p.id) FROM SoireeBundle:Participation p WHERE p.soiree = :idSoiree')
+            ->setParameter('idSoiree', $id_soiree)
             ->getSingleScalarResult();
     }
+
+    public function getParticipantsSoiree($id_soiree)
+    {
+        return $this->getEntityManager()
+            ->createQuery('SELECT (u.username) FROM SoireeBundle:Participation p LEFT JOIN p.participant u WHERE p.soiree = :idSoiree')
+            ->setParameter('idSoiree', $id_soiree)
+            ->getResult();
+    }
+
+}
+
+//public function getParticipantsSoiree($id_soiree)
+//{
+//    return $this->getEntityManager()
+//        ->createQuery('SELECT (p.participant) FROM SoireeBundle:Participation p WHERE p.soiree = :idSoiree')
+//        ->setParameter('idSoiree', $id_soiree)
+//        ->getResult();
+//}
 
 //    public function getNbParticipantsSoiree2($id_soiree)
 //    {
@@ -28,4 +54,5 @@ class ParticipationRepository extends \Doctrine\ORM\EntityRepository
 //            )->setParameter('idSoiree', $id_soiree)
 //            ->getResult();
 //    }
-}
+//$query = $em->createQuery('SELECT u.name FROM CmsUser u WHERE u.id IN(46)');
+//$usernames = $query->getResult();
