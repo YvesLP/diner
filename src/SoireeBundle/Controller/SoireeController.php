@@ -24,8 +24,21 @@ class SoireeController extends Controller
 
         $soirees = $em->getRepository('SoireeBundle:Soiree')->findAll();
 
+        //var_dump($soirees);exit;
+
+        foreach ($soirees as $key=>$value) {
+//            echo $soirees[$key]["id"];
+//            $soirees>nbparticipants = $em->getRepository('SoireeBundle:Participation')->getNbParticipantsSoiree($key);
+            echo $key;
+//            echo $soirees[$key]->id;
+        }
+
+        $nbparticipants = $em->getRepository('SoireeBundle:Participation')->getNbParticipantsSoiree(1);
+//        var_dump($nbparticipants);exit;
+
         return $this->render('SoireeBundle:soiree:index.html.twig', array(
             'soirees' => $soirees,
+//            'nb_participants' => $nbparticipants,
         ));
     }
 
@@ -78,7 +91,18 @@ class SoireeController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+
             $em = $this->getDoctrine()->getManager();
+
+            if($editForm->get('phsoiree')->getData() != null) {
+                if($soiree->getPhotoSoiree() != null) {
+                    unlink(__DIR__.'/../../../web/uploads/photosdesoirees/'.$soiree->getPhotoSoiree());
+                    $soiree->setPhotoSoiree(null);
+                }
+            }
+
+            $soiree->preUpload();
+
             $em->persist($soiree);
             $em->flush();
 

@@ -14,6 +14,7 @@
     <th>Nom</th>
 
     <h1>Black & White</h1>
+
     <div class="hexagone">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300,200,100,900' rel='stylesheet' type='text/css'>
@@ -101,19 +102,21 @@
                 </div>
             </li>
         </ul>
+    </div>
 
-        <table>
+    <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Soirées</th>
-                <th>Dates</th>
-                <th>Photos</th>
-                <th>Plats</th>
+                <th>Soirée</th>
+                <th>Date</th>
+                <th>Plat</th>
+                <th>Photo</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
+<<<<<<< HEAD
         {% for soiree in soirees %}
             <tr>
                 <td><a href="{{ path('soiree_show', { 'id': soiree.id }) }}">{{ soiree.id }}</a></td>
@@ -138,6 +141,28 @@
             </tr>
 
         {% endfor %}
+=======
+            {% for soiree in soirees %}
+                <tr>
+                    <td><a href="{{ path('soiree_show', { 'id': soiree.id }) }}">{{ soiree.id }}</a></td>
+                    <td>{{ soiree.nom }}</td>
+                    <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>
+                    <td>{{ soiree.platId.nom }}</td>
+                    {#<td>{{ soiree.photoSoiree }}</td>#}
+                    <td><img width="200px" class="image_soiree" src="{{ asset('uploads/photosdesoirees/')}}{{ soiree.photoSoiree }}"></td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('soiree_show', { 'id': soiree.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('soiree_edit', { 'id': soiree.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+>>>>>>> 981a07b11fbe92da1d5739c531e0c9351a15da01
         </tbody>
     </table>
 

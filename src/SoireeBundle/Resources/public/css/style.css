@@ -212,6 +212,7 @@ img {
     width: 100%;
     height: 100%;
 }
+
 h1 {
     font-size: large;
     font-family: cursive;
@@ -476,6 +477,7 @@ svg{
 .X:hover div.back{
     transform:rotateX(0deg);
 }
+<<<<<<< HEAD
 /* Fin 3d images plat */
 
 /* debut animation image participation*/
@@ -487,6 +489,15 @@ svg{
 /* */
 
 /* Debut footer */
+=======
+/* Fin 3d images platbundle */
+
+.image_soiree {
+    height: 15px;
+    width: 15px;
+}
+/* Début footer */
+>>>>>>> 981a07b11fbe92da1d5739c531e0c9351a15da01
 
 footer{
     background: #000;
