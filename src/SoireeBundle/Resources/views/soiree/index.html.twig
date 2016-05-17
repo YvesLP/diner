@@ -118,6 +118,32 @@
             </tr>
         </thead>
         <tbody>
+<<<<<<< HEAD
+        {% for soiree in soirees %}
+            <tr>
+                <td><a href="{{ path('soiree_show', { 'id': soiree.id }) }}">{{ soiree.id }}</a></td>
+                <td>{{ soiree.nom }}</td>
+                <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>
+                <td><img src="{{ asset('uploads/photosdesoirees/')}}{{ soiree.photoSoiree }}</td>
+
+                {{ dump(soiree.platId.nom) }}
+                {% if (soiree.platId.nom != null) %}
+                    <td>{{ soiree.platId }}</td>
+                {% endif %}
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('soiree_show', { 'id': soiree.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('soiree_edit', { 'id': soiree.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+
+        {% endfor %}
+=======
             {% for soiree in soirees %}
                 <tr>
                     <td><a href="{{ path('soiree_show', { 'id': soiree.id }) }}">{{ soiree.id }}</a></td>
@@ -144,6 +170,7 @@
                     </td>
                 </tr>
             {% endfor %}
+>>>>>>> 981a07b11fbe92da1d5739c531e0c9351a15da01
         </tbody>
     </table>
 

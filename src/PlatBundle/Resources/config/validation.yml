@@ -1,0 +1,5 @@
+# src/PlatBundle/Resources/config/validation.yml
+PlatBundle\Entity\Plat:
+    properties:
+        phplat:
+            - Image: ~

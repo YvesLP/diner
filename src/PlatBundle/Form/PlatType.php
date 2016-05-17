@@ -18,7 +18,7 @@ class PlatType extends AbstractType
             ->add('nom')
             ->add('ingredients')
             ->add('recette')
-            ->add('photoPlat')
+            ->add('phplat', 'file', array('label' => 'Photo Plat', 'required' => false))
         ;
     }
     

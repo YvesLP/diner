@@ -79,6 +79,16 @@ class PlatController extends Controller
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
+            if($editForm->get('phplat')->getData() !=null) {
+                if($plat->getPhotoPlat() !=null) {
+                    unlink(__DIR__.'/../../../web/uploads/photosdeplats/'.$plat->getPhotoPlat());
+                    $plat->setPhotoPlat(null);
+                }
+            }
+            
+            $plat->preUpload();
+            
             $em->persist($plat);
             $em->flush();
 
