@@ -1,16 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Participation creation</h1>
+    <h1>Ajouter une participation à une soirée</h1>
 
     {{ form_start(form) }}
+        <br/>
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        <br/>
+        <input type="submit" value="Créer" />
     {{ form_end(form) }}
-
+    <br/><br/>
     <ul>
         <li>
-            <a href="{{ path('participation_index') }}">Back to the list</a>
+            <a href="{{ path('participation_index') }}">Retour à la liste</a>
         </li>
     </ul>
 {% endblock %}

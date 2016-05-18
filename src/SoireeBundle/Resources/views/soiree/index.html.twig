@@ -107,12 +107,12 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
+                {#<th>Id</th>#}
                 <th>Soirée</th>
                 <th>Date</th>
                 <th>Plat</th>
-                <th>Nbre de participant(s)</th>
-                <th>Participant(s)</th>
+                <th>Nbre de participant(es)</th>
+                <th>Participant(es)</th>
                 <th>Photo</th>
                 <th>Actions</th>
             </tr>
@@ -120,9 +120,9 @@
         <tbody>
             {% for soiree in soirees %}
                 <tr>
-                    <td><a href="{{ path('soiree_show', { 'id': soiree.id }) }}">{{ soiree.id }}</a></td>
+                    {#<td><a href="{{ path('soiree_show', { 'id': soiree.id }) }}">{{ soiree.id }}</a></td>#}
                     <td>{{ soiree.nom }}</td>
-                    <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>
+                    <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('d-m-Y') }}{% endif %}</td>
                     {#{{ dump(soiree.platId.nom) }}#}
                     <td>{{ soiree.platId.nom }}</td>
                     <td>{{ soiree.nbparticipants }}</td>
@@ -140,10 +140,10 @@
                     <td>
                         <ul>
                             <li>
-                                <a href="{{ path('soiree_show', { 'id': soiree.id }) }}">show</a>
+                                <a href="{{ path('soiree_show', { 'id': soiree.id }) }}">Voir</a>
                             </li>
                             <li>
-                                <a href="{{ path('soiree_edit', { 'id': soiree.id }) }}">edit</a>
+                                <a href="{{ path('soiree_edit', { 'id': soiree.id }) }}">MAJ</a>
                             </li>
                         </ul>
                     </td>
@@ -151,12 +151,13 @@
             {% endfor %}
         </tbody>
     </table>
-
+    <br/><br/>
     <ul>
         <li>
-            <a href="{{ path('soiree_new') }}">Create a new entry</a>
+            <a href="{{ path('soiree_new') }}">Créer une soirée</a>
         </li>
     </ul>
+    <br/>
     <footer>
         <p>© 2016 Copyright Party Caroline | <strong><span class="diff">Mentions légales</span></strong></p>
     </footer>

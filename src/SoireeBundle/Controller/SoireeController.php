@@ -82,8 +82,30 @@ class SoireeController extends Controller
      */
     public function showAction(Soiree $soiree)
     {
+        $em = $this->getDoctrine()->getManager();
+
         $deleteForm = $this->createDeleteForm($soiree);
 
+        $id = $soiree->getId();
+//        var_dump($id);exit;
+        $nb_participants_de_la_soiree = $em->getRepository('SoireeBundle:Participation')->getNbParticipantsSoiree($id);
+        $soiree->nbparticipants = $nb_participants_de_la_soiree;
+//        var_dump($nb_participants_de_la_soiree);exit;
+        $participants_de_la_soiree = $em->getRepository('SoireeBundle:Participation')->getParticipantsSoiree($id);
+        $pps = array();
+        foreach  ($participants_de_la_soiree as $pdls=>$valpdls) {
+            foreach  ($valpdls as $tpps2=>$valpdls2) {
+                $pps[$pdls] = $valpdls2;
+            }
+//                var_dump($valpdls);exit;
+        }
+//            var_dump($pps);exit;
+//            var_dump($participants_de_la_soiree);exit;
+            $soiree->participants = $pps;
+//            var_dump($soiree);exit;
+
+        
+        
         return $this->render('SoireeBundle:soiree:show.html.twig', array(
             'soiree' => $soiree,
             'delete_form' => $deleteForm->createView(),

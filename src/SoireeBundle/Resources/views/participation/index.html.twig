@@ -11,7 +11,7 @@
             </ul>
         </nav>
     </div>
-    <h1>Participation list</h1>
+    <h1>Liste des Participations aux soirées</h1>
 
     <div class="animation">
         <div class="loading">
@@ -81,10 +81,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('participation_show', { 'id': participation.id }) }}">show</a>
+                            <a href="{{ path('participation_show', { 'id': participation.id }) }}">Voir</a>
                         </li>
                         <li>
-                            <a href="{{ path('participation_edit', { 'id': participation.id }) }}">edit</a>
+                            <a href="{{ path('participation_edit', { 'id': participation.id }) }}">MAJ</a>
                         </li>
                     </ul>
                 </td>
@@ -95,7 +95,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('participation_new') }}">Create a new entry</a>
+            <a href="{{ path('participation_new') }}">Ajouter une participation</a>
         </li>
     </ul>
     <footer>

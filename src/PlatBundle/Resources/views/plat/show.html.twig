@@ -28,18 +28,21 @@
             </tr>
         </tbody>
     </table>
-
+    <br/><br/>
     <ul>
         <li>
-            <a href="{{ path('plat_index') }}">Back to the list</a>
+            <a href="{{ path('plat_index') }}">Retour à la liste</a>
         </li>
+        <br/>
         <li>
-            <a href="{{ path('plat_edit', { 'id': plat.id }) }}">Edit</a>
+            <a href="{{ path('plat_edit', { 'id': plat.id }) }}">Modification</a>
         </li>
+        <br/>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Suppression">
             {{ form_end(delete_form) }}
         </li>
     </ul>
+    <br/>
 {% endblock %}

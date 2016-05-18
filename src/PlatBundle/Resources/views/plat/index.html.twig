@@ -35,7 +35,7 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
+                {#<th>Id</th>#}
                 <th>Nom</th>
                 <th>Ingredients</th>
                 <th>Recette</th>
@@ -47,7 +47,7 @@
 
         {% for plat in plats %}
             <tr>
-                <td><a href="{{ path('plat_show', { 'id': plat.id }) }}">{{ plat.id }}</a></td>
+                {#<td><a href="{{ path('plat_show', { 'id': plat.id }) }}">{{ plat.id }}</a></td>#}
                 <td>{{ plat.nom }}</td>
                 <td>{{ plat.ingredients }}</td>
                 <td>{{ plat.recette }}</td>
@@ -56,10 +56,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('plat_show', { 'id': plat.id }) }}">show</a>
+                            <a href="{{ path('plat_show', { 'id': plat.id }) }}">Voir</a>
                         </li>
                         <li>
-                            <a href="{{ path('plat_edit', { 'id': plat.id }) }}">edit</a>
+                            <a href="{{ path('plat_edit', { 'id': plat.id }) }}">MAJ</a>
                         </li>
                     </ul>
                 </td>
@@ -67,13 +67,13 @@
         {% endfor %}
         </tbody>
     </table>
-
+    <br/><br/>
     <ul>
         <li>
-            <a href="{{ path('plat_new') }}">Create a new entry</a>
+            <a href="{{ path('plat_new') }}">Créer un nouveau plat</a>
         </li>
     </ul>
-
+    <br/><br/>
     <!-- Début footer -->
     <footer>
         <p>© 2016 Copyright Party Caroline | <strong><span class="diff">Mentions légales</span></strong></p>
