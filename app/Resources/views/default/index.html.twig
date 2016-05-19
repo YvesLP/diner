@@ -4,87 +4,183 @@
 
     <!-- Début barnav principale -->
 
-    <div class="nav_header" xmlns="http://www.w3.org/1999/html">
-        <nav>
-            <ul>
-                <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
-                <li><a href="{{ path("plat_index") }}" title="Télécharger">Plat</a></li>
-                <li><a href="{{ path("soiree_index") }}" title="Télécharger">Soiree</a></li>
-                <li><a href="{{ path("participation_index") }}" title="Télécharger">Participation</a></li>
-            </ul>
-        </nav>
-    </div>
+
+
+
 
     <!-- Fin barnav principale -->
 
     <!-- Début du parralax avec texte et image -->
 
-    <div id="main">
-        <header >
+    <header >
 
-            <!-- Début de l'animation de txt dans header-->
 
-            <div class="body">
-                <<svg width="100%" height="100%" viewBox="30 -50 600 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                    <path id="path">
-                        <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/>
-                    </path>
-                    <text font-size="26" font-family="Montserrat" fill='hsla(36, 95%, 85%, 1)'>
-                        <textPath xlink:href="#path">Welcome everybody to the party Black & Night.
-                        </textPath>
-                    </text>
-                </svg>
+        <div class="nav_header" xmlns="http://www.w3.org/1999/html">
+            <nav>
+                <ul>
+                    <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
+                    <li><a href="{{ path("plat_index") }}" title="Télécharger">Plat</a></li>
+                    <li><a href="{{ path("soiree_index") }}" title="Télécharger">Soiree</a></li>
+                    <li><a href="{{ path("participation_index") }}" title="Télécharger">Participation</a></li>
+                    {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+                        <li><a href="{{ path ('fos_user_security_logout') }}">Logout</a></li>
+                    {% else %}
+                        <li><a href="{{ path("user_login") }}">Connexion</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Debut du slogan milieu header -->
+
+        <hgroup class="article__headline7">
+            <h2 style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" class="headline__secondary">
+                <span class="first-letter">W</span>elcome</h2>
+            <h1 style="margin-right: -0.1em; letter-spacing: 0.2em; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" class="headline__primary">Caroline</h1>
+            <div style="opacity: 1;" class="headline__description">
+                <div style="width: 287px;" class="pixcode  pixcode--separator  separator separator--line-flower separator_color--light">
+                    <div style="width: 42%; opacity: 1;" class="line  line--left"></div>
+                    <div style="width: 42%; opacity: 1;" class="line  line--right"></div>
+                    <div style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" class="star">✻</div>
+                    <div class="arrows"><div style="opacity: 1;" class="arrow arrow--left"></div>
+                        <div style="opacity: 1;" class="arrow arrow--right">
+                        </div>
+                    </div>
+                </div>
+                <h5 style="opacity: 1; transform: translate3d(0px, 0px, 0px);">Ready To Be Opened</h5>
             </div>
+        </hgroup>
 
-            <!-- Fin de l'animation de txt dans header -->
-        </header>
+
+        <div style="opacity: 0.7; transform: matrix(1, 0, 0, 1, 0, 0);" class="down-arrow down-arrow--transparent">
+            <div class="arrow">
+            </div>
+        </div>
+
+
+
+        <!-- Fin de l'animation de txt dans header -->
+    </header>
 
         <!-- Début des effets parralax -->
+    <div class="row_block">
+        <div class="col-md-6 block 1">
+            <section class="article__content">
+                <section class="page__content  js-post-gallery  cf">
+                    <div class="pixcode  pixcode--grid  grid  ">
+                        <div class="grid__item six-twelfths palm-one-whole island">
+                            <hgroup class="pixcode  pixcode--heading article__headline">
+                                <h2 class="headline__secondary2"><span class="first-letter">D</span>iscover</h2>
+                                <h1 class="headline__primary">Our Story</h1>
+                            </hgroup>
+                            <div class="pixcode  pixcode--separator  separator separator--flower separator_color--color">✻</div>
+                                <p style="text-align: center;">Caroline is a restaurant, bar and coffee roastery located on a busy corner site in Farringdon’s Exmouth Market. With glazed frontage on two sides of the building, overlooking the market and a bustling London intersection.</p>
+                                <p style="text-align: center;">
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+                        <div class="col-md-6 block2">
+                            <div class="grid__item six-twelfths palm-one-whole ">
+                                <img class="wp-image-10" src="https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/cheeries.jpg" alt="cheeries" height="480" width="660">
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="container" style="padding-top:100px;padding-bottom:100px">
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur sed enim in mollis. Proin molestie libero id congue hendrerit. In hac habitasse platea dictumst. Aenean augue libero, scelerisque id sagittis et, tristique nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam congue maximus efficitur. Fusce malesuada, magna eu porttitor fermentum, lorem arcu fermentum mi, porta faucibus lorem mauris sed felis. Curabitur dignissim risus quam, rutrum congue tellus aliquet sit amet. Cras luctus ac lectus non sollicitudin. Sed dolor metus, tempor eleifend orci et, laoreet vulputate orci. </p>
+
+    <section class="fullwidth">
+        <div class="paralax1" data-center="background-position: 50% 0px;"
+             data-top-bottom="background-position: 50% -200px;
+             " data-bottom-top="background-position: 50% 100px;">
+        </div>
+    </section>
+
+<div class="col-md-6 photos">
+    <section class="article__content">
+        <div class="container">
+            <section class="page__content  js-post-gallery  cf">
+                <div class="pixcode  pixcode--grid  grid  ">
+
+
+                    <a data-title="menu-thumb-6" data-alt="" href="https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/menu-thumb-6.jpg">
+                        <img class="image1" src="https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/menu-thumb-6-300x218.jpg" class="attachment-medium" alt="menu-thumb-6" height="218" width="300"></a>
+
+                </figure>
+                <figure class="gallery-item">
+
+                        <a data-title="menu-thumb-2" data-alt="" href="https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/menu-thumb-2.jpg">
+                            <img class="image2" src="https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/menu-thumb-2-300x218.jpg" class="attachment-medium" alt="menu-thumb-2" height="218" width="300"></a>
+
+                </figure>
+                <figure class="gallery-item">
+
+                        <a data-title="menu-thumb-1" data-alt="" href="https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/menu-thumb-1.jpg">
+                            <img class="image3" src="https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/menu-thumb-1-300x218.jpg" class="attachment-medium" alt="menu-thumb-1" height="218" width="300">
+                        </a>
+
+                </figure>
+                <figure class="gallery-item">
+
+                        <a data-title="menu-thumb-4" data-alt="" href="https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/menu-thumb-4.jpg">
+                            <img class="image4" src="https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/menu-thumb-4-300x218.jpg" class="attachment-medium" alt="menu-thumb-4" height="218" width="300"></a>
+
+                </figure>
+            </div>
         </div>
     </div>
-    </div>
-    <section class="fullwidth">
-        <div class="paralax1" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-bottom-top="background-position: 50% 100px;">
-            <div class="paralaxtext" data-bottom-top=" opacity:0; transform[swing]:scale(0.5) " data-top=" opacity:1; transform[swing]:scale(1) ">
-                <h2 style="color:white"> Food</h2>
-            </div>
+                <div class="col-md-6 text">
+                    <div class="grid__item six-twelfths palm-one-whole island">
+                        <hgroup class="pixcode  pixcode--heading article__headline">
+                            <h2 class="headline__secondary1">
+                                <span class="first-letter">D</span>iscover</h2>
+                            <h1 class="headline__primary">Menu</h1>
+                        </hgroup>
+                        <div class="pixcode  pixcode--separator  separator separator--flower separator_color--dark">✻</div>
+                        <p style="text-align: center;">For those with pure food indulgence in mind, come next door and sate your desires with our ever changing internationally and seasonally inspired small plates. &nbsp;We love food, lots of different food, just like you.</p>
+                        <p style="text-align: center;">
+                        </p>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
-    <div class="container" style="padding-top:100px;padding-bottom:100px">
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur sed enim in mollis. Proin molestie libero id congue hendrerit. In hac habitasse platea dictumst. Aenean augue libero, scelerisque id sagittis et, tristique nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam congue maximus efficitur. Fusce malesuada, magna eu porttitor fermentum, lorem arcu fermentum mi, porta faucibus lorem mauris sed felis. Curabitur dignissim risus quam, rutrum congue tellus aliquet sit amet. Cras luctus ac lectus non sollicitudin. Sed dolor metus, tempor eleifend orci et, laoreet vulputate orci. </p>
-    </div>
-    <section class="fullwidth">
-        <div class="paralax2" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-bottom-top="background-position: 50% 100px;">
-            <div class="paralaxtext">
-                <h2 style="color:white" data-bottom-top="letter-spacing: 10px;" data-top="letter-spacing: 20px; "> Cocktails </h2>
-            </div>
-    </section>
-    <div class="container" style="padding-top:100px;padding-bottom:100px">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur sed enim in mollis. Proin molestie libero id congue hendrerit. In hac habitasse platea dictumst. Aenean augue libero, scelerisque id sagittis et, tristique nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam congue maximus efficitur. Fusce malesuada, magna eu porttitor fermentum, lorem arcu fermentum mi, porta faucibus lorem mauris sed felis. Curabitur dignissim risus quam, rutrum congue tellus aliquet sit amet. Cras luctus ac lectus non sollicitudin. Sed dolor metus, tempor eleifend orci et, laoreet vulputate orci. </p>
-    </div>
-    <section class="fullwidth">
-        <div class="paralax3" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-bottom-top="background-position: 50% 100px;">
-            <div class="paralaxtext"
-                 data-bottom-top="transform[bounce]:scale(0.5);" data-top="transform[bounce]:scale(1)"
-            >
-                <h2 style="color:white">I REALLY LOVE DANCE </h2>
-            </div>
-    </section>
-    <div class="container" style="padding-top:100px;padding-bottom:100px">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur sed enim in mollis. Proin molestie libero id congue hendrerit. In hac habitasse platea dictumst. Aenean augue libero, scelerisque id sagittis et, tristique nec ipsum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam congue maximus efficitur. Fusce malesuada, magna eu porttitor fermentum, lorem arcu fermentum mi, porta faucibus lorem mauris sed felis. Curabitur dignissim risus quam, rutrum congue tellus aliquet sit amet. Cras luctus ac lectus non sollicitudin. Sed dolor metus, tempor eleifend orci et, laoreet vulputate orci. </p>
-    </div>
-    <br>
 
-    <br> <br> <br>
-    <a target="_blank"> CAROLINE PARTY </a>
-    <br> <br> <br> <br>
-    </div>
-    </div>
+    <section class="fullwidth">
+        <div class="paralax2" data-center="background-position: 50% 0px;"
+             data-top-bottom="background-position: 50% -200px;"
+             data-bottom-top="background-position: 50% 100px;">
+    </section>
+
+
+        <div class="row">
+            <div class="col-md-6 culinary">
+
+
+                <h2 class="headline__secondary"><span class="first-letter">C</span>ulinary</h2>
+                <h1 class="headline__primary">Delight</h1>
+
+            <div class="pixcode  pixcode--separator  separator separator--flower separator_color--dark">✻</div>
+            <p style="text-align: center;">We promise an intimate and relaxed dining experience that offers something different to local and foreign patrons and ensures you enjoy a memorable food experience every time.
+            </p>
+
+
+                </div>
+
+
+            <div class="col-md-6 picture">
+
+
+
+                    <img class="wp-image-34" src="https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/bacon-1-682x1024.jpg" alt="bacon-1" >
+
+
+
+                    <img class="wp-image-35" src="https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/bacon-2-682x1024.jpg" alt="bacon-2" >
+            </div>
+        </div>
+
+
     <!-- Fin des effets parralax -->
 
     <!-- Appel de script pour le parralax -->

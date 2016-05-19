@@ -1,7 +1,5 @@
 /* ensemble body for all pages*/
 body {
-    color: #727272;
-    font-family: 'Raleway',Arial,sans-serif;
     font-size: 14px;
     line-height: 24px;
     text-align: center;
@@ -15,6 +13,7 @@ th {
 }
 td, th {
     padding: 50px;
+    color: grey;
 }
 
 td {
@@ -23,36 +22,29 @@ td {
 
 /* Fin des ent txt */
 
+.navigation--main {
+    float: right;
+}
+
 /* Barre de Nav*/
 
-nav {
-    background-color: transparent;
-    height: 60px;
-}
 
 .nav_header ul{
     text-align: center;
     padding-left: 0;
-    background: url("web/bundles/frameworks/images/logo_symfony.png");
+    padding: 15px;
 }
 
 .nav_header li{
-    list-style-type: none;
     display: inline-block;
-    border-radius: 10px;
-    padding-top: 15px;
-    padding-bottom: 6px;
-    padding-left: 9px;
-    padding-right: 9px;
-    font-size: 25px;
     margin: 0 30px;
 }
 
 a {
     text-decoration: none;
-    color: grey;
-    text-transform: uppercase;
+    color: white;
     letter-spacing: 15px;
+    font-size: 25px;
 }
 
 /* Fin barre de Nav */
@@ -70,52 +62,160 @@ h2, h3 {
     line-height: 40px;
 }
 
+h2 {
+    font-family: Herr Von Muellerhoff;
+}
+
 /* Debut du parallax */
-
-.main {
-    width: 100%;
-}
-
-.container {
-    width: 75%;
-    margin: 0 auto;
-}
 
 /* header*/
 
 header {
-    top: 0;
-    margin: 0;
     height: 100vh;
-    max-height: 100vh;
-    background: url(https://joanitaweb.files.wordpress.com/2009/04/recto-v11.jpg) 50% 0 no-repeat fixed;
-    margin: 0 auto;
-    background-position: center center;
+    background: url(https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/holiday2013_front.jpg) 50% 0 no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+.article__headline5 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
     text-align: center;
-    color: #fff;
+    color: white;
+    padding: 150px;
 }
 
-#headercontent {
-    padding-top: 40vh;
+.headline__secondary {
+    padding: 90px;
+    margin-bottom: -38px;
+    font-family: Herr Von Muellerhoff;
+    color: #C59D5F;
+}
+.article__headline7 {
+    padding: 200px;
 }
 
-/* Parallax windows*/
+.headline__secondary7 .first-letter {
+    top: 15px;
+}
+.headline__secondary7 .first-letter {
+    position: relative;
+    top: 2px;
+    font-size: 1.22em;
+    padding-left: 72px;
+    margin: 0 -72px;
+    letter-spacing: 72px;
+}
 
-.paralaxtext {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 100px;
+.row_block {
+    background-color: white;
+    height: 450px;
+}
+
+.row {
+    padding-top: 20px;
+    height: 450px;
+    width: 100%;
+    background: white;
+}
+
+.block1 {
+    float: left;
+    text-align: center;
+    background-color: white;
+}
+
+.block2 {
+    float: right;
+}
+
+.wp-image-10 {
+    padding-top: 50px;
+    width: 530px;
+    height: 400px;
+}
+.photos {
+    float: left;
+}
+
+.text {
+    float: right;
+}
+
+.image1 {
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+}
+
+.image2 {
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+}
+
+.image3 {
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+}
+
+.image4 {
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+}
+
+.culinary {
+    float: left;
+    text-align: center;
+    width: 400px;
+    padding-top: 120px;
+    margin-left: 25px;
+}
+
+.wp-image-34 {
+    height: 400px;
+    width: 250px;
+    padding: 10px;
+    padding-top: 40px;
+    float: left;
+    margin: 0 25px;
+}
+
+.wp-image-35 {
+    height: 400px;
+    width: 250px;
+    padding: 10px;
+    padding-top: 40px;
+    float: right;
+    margin-right: 55px;
+}
+
+.headline__secondary {
+    padding-top: 10px;
+    padding: 0px;
+}
+
+.headline__secondary1 {
+    padding: 90px;
+}
+
+.headline__secondary2 {
+    padding: 30px;
+}
+
+.picture {
+    width: 650px;
+    float: right;
 }
 
 /* First image */
 .paralax1 {
-    background: url(https://images4.alphacoders.com/235/235738.jpg) 50% 0 no-repeat fixed;
-    margin: 0 auto;
-    padding: 50px 0;
+    background: url(https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/frontpage-menu.jpg) 50% 0 no-repeat fixed;
+    padding: 400px 0;
     background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -127,9 +227,10 @@ header {
 
 /* Second images */
 .paralax2 {
-    background: url(http://www.1wallpaperhd.com/wp-content/uploads/Food/FTP2/2560x1440/Cocktail%20drinks%20wallpaper%2015%202560x1440.jpg) 50% 0 no-repeat fixed;
+    background: url(https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/05/make-a-reservation.jpg) 50% 0 no-repeat fixed;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 300px 0;
+    width: 100%;
     background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -139,32 +240,6 @@ header {
     color: #fff;
 }
 
-/* Third images */
-.paralax3 {
-    background: url(http://blacknwhitewallpapers.com/wp-content/uploads/2015/07/celebrities-indian-celebrities-black-and-white-hrithik-roshan-dance-wallpaper-300x187.jpg) 50% 0 no-repeat fixed;
-    margin: 0 auto;
-    padding: 50px 0;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-
-/* mouse animation */
-
-.mouse {
-    width: 22px;
-    position: absolute;
-    height: 42px;
-    border-radius: 15px;
-    border: 2px solid white;
-    bottom: 40px;
-    left: 50%;
-    margin-left: -12px;
-}
 
 .scroll {
     display: block;
@@ -215,25 +290,28 @@ img {
 
 h1 {
     font-size: large;
-    font-family: cursive;
     text-align: center;
 }
 
-p {
-    text-align: center;
-    padding: 10px;
+.headline__secondary {
+    margin-bottom: -38px;
 }
-
-.block {
-    background-color: #EBC693;
+.headline__secondary {
+    font-weight: normal;
 }
-.block1, .block2, .block3, .block4{
-    width: 300x;
-    height: 200px;
+.headline__secondary {
+    font-family: Herr Von Muellerhoff;
 }
-
-.test1 {
-    float: right;
+.headline__secondary {
+    position: relative;
+    font-family: "Herr Von Muellerhoff",Palatino,serif;
+    font-size: 100px;
+    font-weight: normal;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: 0 72px;
+    margin: 0 -72px;
+    color: #c59d5f;
 }
 
 /* Animation phrase header*/
@@ -483,12 +561,10 @@ svg{
 /* debut animation image participation*/
 
 .animation {
-    height: 800px;
+    height: 300px;
+    width: 700px;
 }
 
-.loading {
-    text-align: center;
-}
 
 /* */
 
@@ -517,3 +593,58 @@ footer{
 
 /* Fin footer */
 
+
+.ul {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #1b0000;
+}
+
+li .pic {
+    animation: func 16s linear infinite 0s;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: no-repeat 50% 30% / cover;
+    opacity: 0;
+}
+/* li:nth-child(1) { } */
+
+li .pic:nth-child(2) {
+    animation-delay: 8s;
+}
+
+li .pic:nth-child(3) {
+    animation-delay: 8s;
+}
+
+@keyframes func {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    5% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.row2 {
+    padding-top: 285px;
+}
+
+/**/
+.wrapper {
+    background-image: url('../images/food.jpg');
+}

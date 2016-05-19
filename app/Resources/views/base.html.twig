@@ -16,6 +16,10 @@
     </head>
     <body>
 
+        {% block fos_user_content %}
+            <link href="{{ asset('bundles/soiree/css/style.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock fos_user_content %}
+
 
         {% block body %}
 
@@ -26,5 +30,6 @@
         {% endblock %}
 
         <script type="text/javascript" src="{{ asset ('bundles/soiree/js/main.js') }}"></script>
+
     </body>
 </html>
