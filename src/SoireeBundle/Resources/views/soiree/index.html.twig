@@ -107,78 +107,57 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
+                {#<th>Id</th>#}
                 <th>Soirée</th>
                 <th>Date</th>
                 <th>Plat</th>
-                <th>Nbre de participant(s)</th>
-                <th>Participant(s)</th>
+                <th>Nbre de participant(es)</th>
+                <th>Participant(es)</th>
                 <th>Photo</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-<<<<<<< HEAD
-        {% for soiree in soirees %}
-            <tr>
-                <td><a href="{{ path('soiree_show', { 'id': soiree.id }) }}">{{ soiree.id }}</a></td>
-                <td>{{ soiree.nom }}</td>
-                <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>
-                <td><img src="{{ asset('uploads/photosdesoirees/')}}{{ soiree.photoSoiree }}</td>
-
-                {{ dump(soiree.platId.nom) }}
-                {% if (soiree.platId.nom != null) %}
-                    <td>{{ soiree.platId }}</td>
-                {% endif %}
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('soiree_show', { 'id': soiree.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('soiree_edit', { 'id': soiree.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-
-        {% endfor %}
-=======
             {% for soiree in soirees %}
                 <tr>
-                    <td><a href="{{ path('soiree_show', { 'id': soiree.id }) }}">{{ soiree.id }}</a></td>
+                    {#<td><a href="{{ path('soiree_show', { 'id': soiree.id }) }}">{{ soiree.id }}</a></td>#}
                     <td>{{ soiree.nom }}</td>
-                    <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>
+                    <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('d-m-Y') }}{% endif %}</td>
+                    {#{{ dump(soiree.platId.nom) }}#}
                     <td>{{ soiree.platId.nom }}</td>
                     <td>{{ soiree.nbparticipants }}</td>
+                    {#{{ dump(soiree.participants) }}#}
                     <td>
-                        {% for participants in soiree %}
-                            {{ participants }}<br/>
-                        {% endfor %}
+                        {% if soiree.participants %}
+                            {% for participants in soiree.participants %}
+                                {#{{ dump(participants) }}#}
+                                {{ participants }}<br/>
+                            {% endfor %}
+                        {% endif %}
                     </td>
                     {#<td>{{ soiree.photoSoiree }}</td>#}
                     <td><img width="200px" class="image_soiree" src="{{ asset('uploads/photosdesoirees/')}}{{ soiree.photoSoiree }}"></td>
                     <td>
                         <ul>
                             <li>
-                                <a href="{{ path('soiree_show', { 'id': soiree.id }) }}">show</a>
+                                <a href="{{ path('soiree_show', { 'id': soiree.id }) }}">Voir</a>
                             </li>
                             <li>
-                                <a href="{{ path('soiree_edit', { 'id': soiree.id }) }}">edit</a>
+                                <a href="{{ path('soiree_edit', { 'id': soiree.id }) }}">MAJ</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
             {% endfor %}
->>>>>>> 981a07b11fbe92da1d5739c531e0c9351a15da01
         </tbody>
     </table>
-
+    <br/><br/>
     <ul>
         <li>
-            <a href="{{ path('soiree_new') }}">Create a new entry</a>
+            <a href="{{ path('soiree_new') }}">Créer une soirée</a>
         </li>
     </ul>
+    <br/>
     <footer>
         <p>© 2016 Copyright Party Caroline | <strong><span class="diff">Mentions légales</span></strong></p>
     </footer>

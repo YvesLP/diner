@@ -1,45 +1,96 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Black & White</h1>
-
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ soiree.id }}</td>
-            </tr>
-            <tr>
-                <th>Nom de la soirée</th>
-                <td>{{ soiree.nom }}</td>
-            </tr>
-            <tr>
-                <th>Date de la soirée</th>
-                <td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Plat</th>
-                <td>{{ soiree.platId.nom }}</td>
-            </tr>
-            <tr>
-                <th>Photo de la soirée</th>
+    <h1>Mes soirées coquines</h1>
+    <div class="row">
+        <div class="col-lg-offset-1 col-md-offset-1 col-xs-offset-0 col-lg-10 col-md-10 col-xs-12">
+            <p style="align-content: center; font-size: 10px;">&nbsp;</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-1 col-md-offset-1 col-xs-offset-0 col-lg-10 col-md-10 col-xs-12">
+            <p style="align-content: center; font-size: 50px;">{{ soiree.nom }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-1 col-md-offset-1 col-xs-offset-0 col-lg-10 col-md-10 col-xs-12">
+            <p style="align-content: center; font-size: 10px;">&nbsp;</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-1 col-md-offset-1 col-xs-offset-0 col-lg-3 col-md-3 col-xs-12">
+            <img class="image_soiree" src="{{ asset('uploads/photosdesoirees/')}}{{ soiree.photoSoiree }}">
+        </div>
+        <div class="col-lg-offset-1 col-md-offset-1 col-xs-offset-0 col-lg-3 col-md-3 col-xs-12">
+            <div class="row">
+                <p style="align-content: center; font-size: 20px;"><br/>Date :<br/><br/>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('d-m-Y') }}{% endif %}</p>
+            </div>
+            <div class="row">
+                <p style="align-content: center; font-size: 20px;">&nbsp;</p>
+            </div>
+            <div class="row">
+                <p style="align-content: center; font-size: 20px;">Plat :<br/><br/>{{ soiree.platId.nom }}</p>
+            </div>
+        </div>
+        <div class="col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-lg-3 col-md-3 col-xs-12">
+            <div class="row">
+                <p style="align-content: center; font-size: 20px;"><br/><br/>{{ soiree.nbparticipants }} participant(es)</p>
+            </div>
+            <div class="row">
+                <p style="align-content: center; font-size: 20px;">
+                    {% if soiree.participants %}
+                        {% for participants in soiree.participants %}
+                            {#{{ dump(participants) }}#}
+                            {{ participants }}<br/>
+                        {% endfor %}
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-1 col-md-offset-1 col-xs-offset-0 col-lg-11 col-md-11 col-xs-12">
+            <p style="align-content: center; font-size: 50px;">&nbsp;</p>
+        </div>
+    </div>
+    {#<table>#}
+        {#<tbody>#}
+            {#<tr>#}
+                {#<th>Id</th>#}
+                {#<td>{{ soiree.id }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Nom de la soirée</th>#}
+                {#<td>{{ soiree.nom }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Date de la soirée</th>#}
+                {#<td>{% if soiree.dateSoiree %}{{ soiree.dateSoiree|date('Y-m-d') }}{% endif %}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Plat</th>#}
+                {#<td>{{ soiree.platId.nom }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Photo de la soirée</th>#}
                 {#<td>{{ soiree.photoSoiree }}</td>#}
-                <td><img class="image_soiree" src="{{ asset('uploads/photosdesoirees/')}}{{ soiree.photoSoiree }}"></td>
-            </tr>
-        </tbody>
-    </table>
-
+                {#<td><img class="image_soiree" src="{{ asset('uploads/photosdesoirees/')}}{{ soiree.photoSoiree }}"></td>#}
+            {#</tr>#}
+        {#</tbody>#}
+    {#</table>#}
+    <br/><br/>
     <ul>
         <li>
-            <a href="{{ path('soiree_index') }}">Back to the list</a>
+            <a href="{{ path('soiree_index') }}">Retour à la liste</a>
         </li>
         <li>
-            <a href="{{ path('soiree_edit', { 'id': soiree.id }) }}">Edit</a>
+            <a href="{{ path('soiree_edit', { 'id': soiree.id }) }}">Modifier</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Supprimer">
             {{ form_end(delete_form) }}
         </li>
     </ul>
+    <br/>
 {% endblock %}

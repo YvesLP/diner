@@ -2,25 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87925427-e017-42ff-ab65-52544cf12750" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/default/login.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/public/css/participation.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/public/css/plat.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UtilBundle/Resources/views/Registration/checkEmail.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UtilBundle/Resources/views/Registration/confirmed.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UtilBundle/Resources/views/Registration/email.txt.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UtilBundle/Resources/views/Registration/register.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UtilBundle/Resources/views/Registration/register_content.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UtilBundle/Resources/views/Security/login.html.twig" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PlatBundle/Resources/public/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PlatBundle/Resources/public/images/food.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlatBundle/Resources/views/plat/edit.html.twig" afterPath="$PROJECT_DIR$/src/PlatBundle/Resources/views/plat/edit.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlatBundle/Resources/views/plat/index.html.twig" afterPath="$PROJECT_DIR$/src/PlatBundle/Resources/views/plat/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlatBundle/Resources/views/plat/new.html.twig" afterPath="$PROJECT_DIR$/src/PlatBundle/Resources/views/plat/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlatBundle/Resources/views/plat/show.html.twig" afterPath="$PROJECT_DIR$/src/PlatBundle/Resources/views/plat/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Controller/SoireeController.php" afterPath="$PROJECT_DIR$/src/SoireeBundle/Controller/SoireeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Resources/config/doctrine/Soiree.orm.yml" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/config/doctrine/Soiree.orm.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/participation/edit.html.twig" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/participation/edit.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/participation/index.html.twig" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/participation/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/participation/new.html.twig" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/participation/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/participation/show.html.twig" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/participation/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/soiree/edit.html.twig" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/soiree/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/soiree/index.html.twig" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/soiree/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/soiree/new.html.twig" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/soiree/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/soiree/show.html.twig" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/views/soiree/show.html.twig" />
     </list>
     <ignored path="diner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/SoireeBundle/Resources/views/participation/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1824">
-              <caret line="147" column="6" selection-start-line="147" selection-start-column="6" selection-end-line="147" selection-end-column="6" />
+              <caret line="151" column="6" selection-start-line="151" selection-start-column="6" selection-end-line="151" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -75,8 +72,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SoireeBundle/Resources/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+            <state relative-caret-position="-2843">
+              <caret line="459" column="0" selection-start-line="459" selection-start-column="0" selection-end-line="459" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -623,12 +620,12 @@
       <workItem from="1463644422416" duration="9761000" />
       <workItem from="1463662832687" duration="1331000" />
       <workItem from="1463664222949" duration="234000" />
-      <workItem from="1463666435230" duration="185000" />
+      <workItem from="1463666435230" duration="609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171813000" />
+    <option name="totallyTimeSpent" value="172237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -1020,14 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlatBundle/Resources/views/plat/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
@@ -1039,15 +1028,23 @@
     <entry file="file://$PROJECT_DIR$/src/SoireeBundle/Resources/views/participation/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1824">
-          <caret line="147" column="6" selection-start-line="147" selection-start-column="6" selection-end-line="147" selection-end-column="6" />
+          <caret line="151" column="6" selection-start-line="151" selection-start-column="6" selection-end-line="151" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlatBundle/Resources/views/plat/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SoireeBundle/Resources/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+        <state relative-caret-position="-2843">
+          <caret line="459" column="0" selection-start-line="459" selection-start-column="0" selection-end-line="459" selection-end-column="0" />
           <folding />
         </state>
       </provider>

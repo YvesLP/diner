@@ -30,7 +30,7 @@ SoireeBundle\Entity\Soiree:
           referencedColumnName: id
     lifecycleCallbacks:
         prePersist: [ preUpload, setCreatedAtValue, setExpiresAtValue ]
-        preUpdate: [ preUpload, setUpdatedAtValue ]
+        preUpdate: [ preUpdate, setUpdatedAtValue ]
         postPersist: [ upload ]
         postUpdate: [ upload ]
         postRemove: [ removeUpload ]

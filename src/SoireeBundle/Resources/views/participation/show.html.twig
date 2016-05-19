@@ -7,30 +7,36 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Participant</th>
                 <th>Soirée</th>
+                <th>Participant</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>{{ participation.id }}</td>
-                <td>{{ participation.participant.username }}</td>
                 <td>{{ participation.soiree.nom }}</td>
+                <td>{{ participation.participant.username }}</td>
             </tr>
         </tbody>
     </table>
-
+    <br/>
     <ul>
         <li>
-            <a href="{{ path('participation_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('participation_edit', { 'id': participation.id }) }}">Edit</a>
-        </li>
-        <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <input type="submit" value="Supprimer">
             {{ form_end(delete_form) }}
+        </li>
+        <br/>
+        <li>
+            <a href="{{ path('participation_new') }}">Ajouter une participation</a>
+        </li>
+        <br/>
+        <li>
+            <a href="{{ path('participation_index') }}">Retour à la liste</a>
+        </li>
+        <br/>
+        <li>
+            <a href="{{ path('participation_edit', { 'id': participation.id }) }}">Modifier</a>
         </li>
     </ul>
 {% endblock %}

@@ -18,6 +18,7 @@ td, th {
 
 td {
     text-align: center;
+    font-family: ;
 }
 
 /* Fin des ent txt */
@@ -399,7 +400,6 @@ svg{
     transform: skewY(-30deg) rotate(60deg);
 
     -webkit-backface-visibility:hidden;
-
 }
 
 /* HEX CONTENT */
@@ -419,6 +419,7 @@ svg{
     -ms-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
     transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
 }
+
 #categories li h1{
     bottom:110%;
     font-style:italic;
@@ -427,6 +428,7 @@ svg{
     padding-top:100%;
     padding-bottom:100%;
 }
+
 #categories li h1:after{
     content:'';
     display:block;
@@ -437,6 +439,7 @@ svg{
     z-index:1;
     border-bottom:2px solid #fff;
 }
+
 #categories li p{
     padding-top:50%;
     top:110%;
@@ -454,6 +457,7 @@ svg{
     top:50%;
     padding-top:10%;
 }
+
 #fork{
     position:fixed;
     top:0;
@@ -645,6 +649,4 @@ li .pic:nth-child(3) {
 }
 
 /**/
-.wrapper {
-    background-image: url('../images/food.jpg');
-}
+
