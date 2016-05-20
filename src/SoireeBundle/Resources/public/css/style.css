@@ -20,6 +20,12 @@ td {
     text-align: center;
 }
 
+.image_soiree {
+    height: 200px;
+    width: 300px;
+    max-width: 300px;
+}
+
 /* Fin des ent txt */
 
 .navigation--main {
@@ -28,6 +34,13 @@ td {
 
 /* Barre de Nav*/
 
+.white {
+    color: white;
+}
+
+.black {
+    background-color: black;
+}
 
 .nav_header ul{
     text-align: center;
@@ -116,12 +129,6 @@ header {
     height: 450px;
 }
 
-.row {
-    padding-top: 20px;
-    height: 450px;
-    width: 100%;
-    background: white;
-}
 
 .block1 {
     float: left;
@@ -580,6 +587,9 @@ svg{
     width: 700px;
 }
 
+.participation_txt {
+    margin-left: 280px;
+}
 
 /* */
 
@@ -662,6 +672,8 @@ li .pic:nth-child(3) {
 
 /**/
 
+
+/* TEST background
 html .wrapper {
     width: 100%;
 }
@@ -699,25 +711,7 @@ html .login_page {
 
 .platext {
     float: left;
-}
-
-.p {
-    height: 200px;
-    width: 500px;
-    padding-top: 80px;
-}
-
-.wp-image-10 {
     padding-top: 150px;
 }
 
-.flower {
-    float: left;
-    margin-left: 290px;
-    padding-top: 15px;
-}
-
-.date__dot {
-    padding-top: 20px;
-}
 

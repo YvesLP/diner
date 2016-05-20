@@ -3,10 +3,18 @@ body {
     font-family: 'Droid Serif', serif;
 }
 
-ul {
+.nav_header {
     background-color: black;
 }
 
+.couleur {
+    color: grey;
+    font-size: 20px;
+}
+
+.ajout {
+    margin-right: 490px;
+}
 
 .slider1 {
     float: left;
@@ -19,11 +27,11 @@ ul {
 .content-slider {
     width: 100%;
     height: 360px;
-    padding-top: 40px;
+    padding-top: 60px;
 }
 
 .slider {
-    height: 350px;
+    height: 400px;
     width: 750px;
     margin: 40px auto 0;
     overflow: visible;
@@ -32,7 +40,7 @@ ul {
 
 .mask {
     overflow: hidden;
-    height: 320px;
+    height: 450px;
 }
 
 .slider ul {

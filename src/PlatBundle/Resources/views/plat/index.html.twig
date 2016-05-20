@@ -20,19 +20,19 @@
         </nav>
     </div>
     <!-- Fin Navbar principale -->
-    <div class="rowplat">
+    <div class="row">
         <div class="col-md-6 platext">
             <time class="published" datetime="2014-06-02T07:33:36+00:00">May<span class="date__dot"></span>30<span class="date__dot"></span>2016</time>
-            </div>
+
         </br>
             <div class="flower">✻</div>
                 <p class="p">The key is to buy specific cuts for specific dishes and be firm with your butcher. Opt for tender cuts from the inner haunch muscle if..</p>
-
+        </div>
         <div class="col-md-6 platimage">
 
                 <img class="wp-image-10" src="https://demos-pgm.netdna-ssl.com/demos/rosa/wp-content/uploads/2014/06/duette_fall-900x599.jpg" alt="cheeries" height="480" width="660">
         </div>
-    </div>
+
 
 
     <!-- Nom des entity -->
@@ -60,10 +60,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('plat_show', { 'id': plat.id }) }}">Voir</a>
+                            <a class="couleur" href="{{ path('plat_show', { 'id': plat.id }) }}">Voir</a>
                         </li>
                         <li>
-                            <a href="{{ path('plat_edit', { 'id': plat.id }) }}">MAJ</a>
+                            <a class="couleur" href="{{ path('plat_edit', { 'id': plat.id }) }}">MAJ</a>
                         </li>
                     </ul>
                 </td>

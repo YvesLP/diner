@@ -10,6 +10,6 @@
 /vendor/
 /bin/
 /composer.phar
-/idea
+/.idea
 /web/uploads/photosdesoirees/*
 /web/uploads/photosdeplats/*

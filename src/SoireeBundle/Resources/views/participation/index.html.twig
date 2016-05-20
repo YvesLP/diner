@@ -23,9 +23,6 @@
         </nav>
     </div>
 
-    <h1>Liste des Participations aux soirées</h1>
-
-
 <div class="col-md-6 slider1">
     <div class="content-slider">
         <div class="slider">
@@ -58,64 +55,60 @@
 </div>
 
     <div class="col-md-6 anim">
-    <div class="animation">
-        <div class="loading">
-            <img class="animation" src="https://lh6.googleusercontent.com/-ly7VNHdei4w/U4rS1A6OOYI/AAAAAAAE_Ac/3WfsX31b3yg/w500-h355-no/tumblr_n5iuntOTjU1sk1rjvo1_500.gif" alt="Loading" />
+        <div class="animation">
+            <div class="loading">
+                <img class="animation" src="https://lh6.googleusercontent.com/-ly7VNHdei4w/U4rS1A6OOYI/AAAAAAAE_Ac/3WfsX31b3yg/w500-h355-no/tumblr_n5iuntOTjU1sk1rjvo1_500.gif" alt="Loading" />
+            <article>
+                <div class="entry-thumb static">
+                    <div class="part part-1"></div>
+                    <div class="part part-2"></div>
+                    <div class="part part-3"></div>
+                    <div class="part part-4"></div>
+                </div>
+            </article>
 
+
+            <article>
+                <div class="entry-thumb four">
+                    <div class="part part-1"></div>
+                    <div class="part part-2"></div>
+                    <div class="part part-3"></div>
+                    <div class="part part-4"></div>
+                </div>
+            </article>
+
+            <article>
+                <div class="entry-thumb three">
+                    <div class="part part-1"></div>
+                    <div class="part part-2"></div>
+                    <div class="part part-3"></div>
+                    <div class="part part-4"></div>
+                </div>
+            </article>
+
+            <article>
+                <div class="entry-thumb two">
+                    <div class="part part-1"></div>
+                    <div class="part part-2"></div>
+                    <div class="part part-3"></div>
+                    <div class="part part-4"></div>
+                </div>
+            </article>
+
+            <article>
+                <div class="entry-thumb one">
+                    <div class="part part-1"></div>
+                    <div class="part part-2"></div>
+                    <div class="part part-3"></div>
+                    <div class="part part-4"></div>
+                </div>
+            </article>
         </div>
-
-        <article>
-            <div class="entry-thumb static">
-                <div class="part part-1"></div>
-                <div class="part part-2"></div>
-                <div class="part part-3"></div>
-                <div class="part part-4"></div>
-            </div>
-        </article>
-
-
-        <article>
-            <div class="entry-thumb four">
-                <div class="part part-1"></div>
-                <div class="part part-2"></div>
-                <div class="part part-3"></div>
-                <div class="part part-4"></div>
-            </div>
-        </article>
-
-        <article>
-            <div class="entry-thumb three">
-                <div class="part part-1"></div>
-                <div class="part part-2"></div>
-                <div class="part part-3"></div>
-                <div class="part part-4"></div>
-            </div>
-        </article>
-
-        <article>
-            <div class="entry-thumb two">
-                <div class="part part-1"></div>
-                <div class="part part-2"></div>
-                <div class="part part-3"></div>
-                <div class="part part-4"></div>
-            </div>
-        </article>
-
-        <article>
-            <div class="entry-thumb one">
-                <div class="part part-1"></div>
-                <div class="part part-2"></div>
-                <div class="part part-3"></div>
-                <div class="part part-4"></div>
-            </div>
-        </article>
     </div>
-
-    </div>
-
+</div>
 
 
-<div class="clo-md-12">
+<div class="col-md-12 participation_txt">
     <table>
         <thead>
             <tr>
@@ -132,10 +125,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('participation_show', { 'id': participation.id }) }}">Voir</a>
+                            <a class="couleur" href="{{ path('participation_show', { 'id': participation.id }) }}">Voir</a>
                         </li>
                         <li>
-                            <a href="{{ path('participation_edit', { 'id': participation.id }) }}">MAJ</a>
+                            <a class="couleur" href="{{ path('participation_edit', { 'id': participation.id }) }}">MAJ</a>
                         </li>
                     </ul>
                 </td>
@@ -145,11 +138,12 @@
     </table>
 
     <ul>
-        <li>
+        <li class="ajout" >
             <a href="{{ path('participation_new') }}">Ajouter une participation</a>
         </li>
     </ul>
 </div>
+
     <footer>
         <p>© 2016 Copyright Party Caroline | <strong><span class="diff">Mentions légales</span></strong></p>
     </footer>

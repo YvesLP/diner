@@ -15,17 +15,17 @@
     <header >
 
 
-        <div class="nav_header" xmlns="http://www.w3.org/1999/html">
+        <div class="nav_header"  xmlns="http://www.w3.org/1999/html">
             <nav>
                 <ul>
-                    <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
-                    <li><a href="{{ path("plat_index") }}" title="Télécharger">Plat</a></li>
-                    <li><a href="{{ path("soiree_index") }}" title="Télécharger">Soiree</a></li>
-                    <li><a href="{{ path("participation_index") }}" title="Télécharger">Participation</a></li>
+                    <li><a class="white" href="{{ path("homepage") }}" >Accueil</a></li>
+                    <li><a class="white" href="{{ path("plat_index") }}" >Plat</a></li>
+                    <li><a class="white" href="{{ path("soiree_index") }}" >Soiree</a></li>
+                    <li><a class="white" href="{{ path("participation_index") }}" >Participation</a></li>
                     {% if is_granted("IS_AUTHENTICATED_FULLY") %}
-                        <li><a href="{{ path ('fos_user_security_logout') }}">Logout</a></li>
+                        <li><a class="white" href="{{ path ('fos_user_security_logout') }}">Logout</a></li>
                     {% else %}
-                        <li><a href="{{ path("user_login") }}">Connexion</a></li>
+                        <li><a class="white" href="{{ path("user_login") }}">Connexion</a></li>
                     {% endif %}
                 </ul>
             </nav>
@@ -35,7 +35,7 @@
 
         <hgroup class="article__headline7">
             <h2 style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" class="headline__secondary">
-                <span class="first-letter">W</span>elcomesssss</h2>
+                <span class="first-letter">W</span>elcome</h2>
             <h1 style="margin-right: -0.1em; letter-spacing: 0.2em; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" class="headline__primary">Caroline</h1>
             <div style="opacity: 1;" class="headline__description">
                 <div style="width: 287px;" class="pixcode  pixcode--separator  separator separator--line-flower separator_color--light">
