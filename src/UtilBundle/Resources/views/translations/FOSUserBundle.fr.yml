@@ -1,0 +1,71 @@
+group:
+    edit:
+        submit: 'Mettre à jour le groupe'
+    show:
+        name: 'Nom du groupe'
+    new:
+        submit: 'Créer le groupe'
+    flash:
+        updated: 'Groupe mis à jour'
+        created: 'Groupe créé'
+        deleted: 'Groupe supprimé'
+security:
+    login:
+        username: 'Pseudo'
+        password: 'Mot de passe'
+        remember_me: 'Se souvenir de moi'
+        submit: Connexion
+        mail: 'Email'
+profile:
+    show:
+        username: 'Nom d''utilisateur'
+        email: 'Adresse e-mail'
+    edit:
+        submit: 'Mettre à jour'
+    flash:
+        updated: 'Profil mis à jour'
+change_password:
+    submit: 'Modifier le mot de passe'
+    flash:
+        success: 'Mot de passe modifié'
+registration:
+    check_email: "Un email a été envoyé à votre address %email%.\n\n Il contient un lien d activation sur lequel il faudra cliquer pour activer votre compte.\n\n Aprés avoir activé votre compte vous aurez accés au meilleur réseau de codeur sans chaussure.\n\n A très bientôt !"
+    confirmed: 'Félicitations %username%, votre compte est maintenant activé.'
+    back: 'Retour à la page d''origine.'
+    submit: S'inscrire
+    flash:
+        user_created: 'Utilisateur créé avec succès'
+    email:
+        subject: 'Bonjour %lastname% '
+        message: "Bonjour %lastname% !\n\nPour valider votre compte utilisateur, merci de cliquer sur le lien  %confirmationUrl%.\n\nVous pourrez ensuite vous connecter sur la plateforme d''échange de la http://www.wildcodescool.fr\n\n A bientôt Cordialement,\nL''équipe de la wildcodescool.\n"
+resetting:
+    password_already_requested: 'Un nouveau mot de passe a déjà été demandé pour cet utilisateur dans les dernières 24 heures.'
+    check_email: 'Un e-mail a été envoyé à l''adresse %email%. Il contient un lien sur lequel il vous faudra cliquer afin de réinitialiser votre mot de passe.'
+    request:
+        invalid_username: 'Le nom d''utilisateur ou l''adresse e-mail "%username%" n''existe pas.'
+        username: 'Nom d''utilisateur ou adresse e-mail'
+        submit: 'Réinitialiser le mot de passe'
+    reset:
+        submit: 'Modifier le mot de passe'
+    flash:
+        success: 'Mot de passe réinitialisé avec succès'
+    email:
+        subject: 'Réinitialisation de votre mot de passe'
+        message: "Bonjour %username% !\n\nPour réinitialiser votre mot de passe, merci de vous rendre sur %confirmationUrl%\n\nCordialement,\nL''équipe.\n"
+layout:
+    logout: Déconnexion
+    login: Connexion
+    register: Inscription
+    logged_in_as: 'Connecté en tant que %username%'
+form:
+    group_name: 'Nom du groupe'
+    name: 'Nom'
+    lastname: 'Prénom'
+    birthday: 'Date de naissance'
+    username: 'Pseudo'
+    email: 'Adresse e-mail'
+    current_password: 'Mot de passe actuel'
+    password: 'Mot de passe'
+    password_confirmation: Retapez votre mot de passe
+    new_password: 'Nouveau mot de passe'
+    new_password_confirmation: Retapez votre mot de passe

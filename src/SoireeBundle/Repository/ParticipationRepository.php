@@ -10,15 +10,6 @@ namespace SoireeBundle\Repository;
  */
 class ParticipationRepository extends \Doctrine\ORM\EntityRepository
 {
-//    public function getNbParticipantsSoiree($id_soiree)
-//    {
-//        return $this->createQueryBuilder('id')
-//            ->select('COUNT(id)')
-//            ->where('soiree = :idSoiree')
-//            ->setParameter('idSoiree', $id_soiree)
-//            ->getQuery()
-//            ->getSingleScalarResult();
-//    }
 
     public function getNbParticipantsSoiree($id_soiree)
     {
@@ -38,6 +29,17 @@ class ParticipationRepository extends \Doctrine\ORM\EntityRepository
 
 }
 
+//    public function getNbParticipantsSoiree($id_soiree)
+//    {
+//        return $this->createQueryBuilder('id')
+//            ->select('COUNT(id)')
+//            ->where('soiree = :idSoiree')
+//            ->setParameter('idSoiree', $id_soiree)
+//            ->getQuery()
+//            ->getSingleScalarResult();
+//    }
+
+
 //public function getParticipantsSoiree($id_soiree)
 //{
 //    return $this->getEntityManager()
@@ -56,3 +58,4 @@ class ParticipationRepository extends \Doctrine\ORM\EntityRepository
 //    }
 //$query = $em->createQuery('SELECT u.name FROM CmsUser u WHERE u.id IN(46)');
 //$usernames = $query->getResult();
+
