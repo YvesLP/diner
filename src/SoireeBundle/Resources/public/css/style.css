@@ -12,13 +12,13 @@ th {
 
 }
 td, th {
-    padding: 50px;
+    padding: 40px;
     color: grey;
 }
 
 td {
     text-align: center;
-    font-family: ;
+    /*font-family: ;*/
 }
 
 /* Fin des ent txt */
@@ -43,7 +43,7 @@ td {
 
 a {
     text-decoration: none;
-    color: white;
+    color: grey;
     letter-spacing: 15px;
     font-size: 25px;
 }
@@ -650,3 +650,62 @@ li .pic:nth-child(3) {
 
 /**/
 
+html .wrapper {
+    width: 100%;
+}
+
+.wrapper {
+    background-image: url('../images/login1.jpg');
+    background-size: cover;
+    height: 850px;
+    width: 980px;
+    background-repeat: no-repeat;
+    padding-top: 0px;
+}
+
+.register {
+    background-color: #1b0000;
+}
+
+
+
+html .login_page {
+    width: 100%;
+}
+
+.login_page {
+    background-image: url('../images/food.jpg');
+    background-size: cover;
+    height: 1000px;
+    width: 980%;
+    background-repeat: no-repeat;
+
+}
+
+.platimage {
+    float: right;
+}
+
+.platext {
+    float: left;
+}
+
+.p {
+    height: 200px;
+    width: 500px;
+    padding-top: 80px;
+}
+
+.wp-image-10 {
+    padding-top: 150px;
+}
+
+.flower {
+    float: left;
+    margin-left: 290px;
+    padding-top: 15px;
+}
+
+.date__dot {
+    padding-top: 20px;
+}

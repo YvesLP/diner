@@ -16,11 +16,11 @@ app:
 
 user_login:
     path:    /user/login
-    defaults: { _controller: AppBundle:Security:login}
+    defaults: { _controller: FOSUserBundle:Security:login}
 
 user_login_check:
     path:    /user/login/check
-    defaults: { _controller: AppBundle:Security:check}
+    defaults: { _controller: UtilBundle:Security:check}
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
