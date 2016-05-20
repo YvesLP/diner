@@ -1,6 +1,5 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-
 <div class="nav_header" xmlns="http://www.w3.org/1999/html">
     <nav>
         <ul class="register">
@@ -13,15 +12,105 @@
 </div>
 
 
-<div class="wrapper">
 
 
 
+    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register form-register'}}) }}
 
-    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'registration.submit'|trans }}" />
+    <div class="row">
+        <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4">
+            <h2>Inscription</h2>
+        </div>
     </div>
-</div>
+
+    <div class="row">
+        <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4">
+            {{ form_label(form.username)}}
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                {{ form_widget(form.username, { 'attr': {'class': 'form-control pseudo', 'placeholder': 'Votre Pseudo'}}) }}
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4">
+            {{ form_label(form.email)}}
+            <div class="input-group">
+                <span class="input-group-addon"><i>@</i></span>
+                {{ form_widget(form.email, { 'attr': {'class': 'form-control email', 'placeholder': 'Votre Email'}}) }}
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4">
+            {{ form_label(form.plainPassword.first)}}
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                {{ form_widget(form.plainPassword.first, { 'attr': {'class': 'form-control', 'placeholder': ' Mot de passe'}}) }}
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4">
+            {{ form_label(form.plainPassword.second)}}
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'form-control', 'placeholder': 'Retapez le mot de passe'}}) }}
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4">
+            {{ form_label(form.gouts)}}
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                {{ form_widget(form.gouts, { 'attr': {'class': 'form-control', 'placeholder': 'Vos goûts'}}) }}
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4">
+            {{ form_label(form.allergies)}}
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                {{ form_widget(form.allergies, { 'attr': {'class': 'form-control', 'placeholder': 'Vos allergies'}}) }}
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4">
+            {{ form_label(form.photoUtil)}}
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-camera"></i></span>
+                {{ form_widget(form.photoUtil, { 'attr': {'class': 'form-control', 'placeholder': 'Votre photo'}}) }}
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4">
+            <input class="login btn btn-lg btn-block" type="submit" value="{{ 'registration.submit'|trans }}" />
+        </div>
+    </div>
+    <br>
+    <br>
+
 {{ form_end(form) }}
+
+
+
+

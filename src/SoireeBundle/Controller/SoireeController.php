@@ -45,7 +45,7 @@ class SoireeController extends Controller
 //            $value->participants = $participants_par_soiree;
         }
 
-       // var_dump($soirees);
+//        var_dump($soirees);
 
         return $this->render('SoireeBundle:soiree:index.html.twig', array(
             'soirees' => $soirees,
@@ -92,6 +92,7 @@ class SoireeController extends Controller
         $soiree->nbparticipants = $nb_participants_de_la_soiree;
 //        var_dump($nb_participants_de_la_soiree);exit;
         $participants_de_la_soiree = $em->getRepository('SoireeBundle:Participation')->getParticipantsSoiree($id);
+//        var_dump($participants_de_la_soiree);exit;
         $pps = array();
         foreach  ($participants_de_la_soiree as $pdls=>$valpdls) {
             foreach  ($valpdls as $tpps2=>$valpdls2) {
@@ -104,7 +105,7 @@ class SoireeController extends Controller
             $soiree->participants = $pps;
 //            var_dump($soiree);exit;
 
-        
+
         
         return $this->render('SoireeBundle:soiree:show.html.twig', array(
             'soiree' => $soiree,

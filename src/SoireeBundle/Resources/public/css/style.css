@@ -9,8 +9,8 @@ body {
 th {
     text-align: center;
     font-size: 20px;
-
 }
+
 td, th {
     padding: 40px;
     color: grey;
@@ -18,7 +18,6 @@ td, th {
 
 td {
     text-align: center;
-    /*font-family: ;*/
 }
 
 /* Fin des ent txt */
@@ -94,6 +93,7 @@ header {
     font-family: Herr Von Muellerhoff;
     color: #C59D5F;
 }
+
 .article__headline7 {
     padding: 200px;
 }
@@ -101,6 +101,7 @@ header {
 .headline__secondary7 .first-letter {
     top: 15px;
 }
+
 .headline__secondary7 .first-letter {
     position: relative;
     top: 2px;
@@ -137,6 +138,7 @@ header {
     width: 530px;
     height: 400px;
 }
+
 .photos {
     float: left;
 }
@@ -338,22 +340,25 @@ svg{
 .hexagone{
     font-family: 'Open Sans', arial, sans-serif;
     background: black;
-
 }
+
 *{
     margin:0;
     padding:0;
 }
+
 #categories{
     overflow:hidden;
     width:90%;
     margin:0 auto;
 }
+
 .clr:after{
     content:"";
     display:block;
     clear:both;
 }
+
 #categories li{
     position:relative;
     list-style-type:none;
@@ -394,11 +399,9 @@ svg{
     text-align:center;
     color: #FFF;
     overflow:hidden;
-
     -webkit-transform: skewY(-30deg) rotate(60deg);
     -ms-transform: skewY(-30deg) rotate(60deg);
     transform: skewY(-30deg) rotate(60deg);
-
     -webkit-backface-visibility:hidden;
 }
 
@@ -470,6 +473,7 @@ svg{
     transition: color .5s;
     overflow:hidden;
 }
+
 #fork:before {
     content: '';
     position: absolute;
@@ -484,6 +488,7 @@ svg{
 #fork:hover {
     color: #fff;
 }
+
 #fork:hover:before {
     transform: translateX(0) skewX(-45deg);
 }
@@ -496,6 +501,7 @@ svg{
     width:1400px;
     margin:50px auto;
 }
+
 .flip{
     width:650px;
     height: 500px;
@@ -504,6 +510,7 @@ svg{
     position: relative;
     perspective: 1000px;
 }
+
 .flip div{
     width: 100%;
     height: 100%;
@@ -515,10 +522,12 @@ svg{
     backface-visibility: hidden;
     box-shadow: 2px 2px 20px rgba(0,0,0,.5);
 }
+
 .flip div.front{
     background: url(http://images.google.fr/imgres?imgurl=http%3A%2F%2Fwww.petitsplatsentreamis.com%2Fwp-content%2Fuploads%2F2013%2F12%2FHuitre-gratin%2525C3%2525A9e.jpg&imgrefurl=http%3A%2F%2Fwww.petitsplatsentreamis.com%2Fhuitres-gratinees-au-champagne%2F&h=683&w=1024&tbnid=Q9RQn9Wt278cWM%3A&docid=1xtIwEWiBjHdSM&ei=Xt06V_GxIJOLaqbTj7gI&tbm=isch&client=ubuntu&iact=rc&uact=3&dur=516&page=1&start=0&ndsp=15&ved=0ahUKEwjx2M6i3-DMAhWThRoKHabpA4cQMwgfKAEwAQ&bih=617&biw=1193);
     z-index: 1;
 }
+
 .flip div:before{
     content:attr(data-text);
     width:100%;
@@ -531,6 +540,7 @@ svg{
     color:#fff;
     background-color:rgba(0,0,0,.3);
 }
+
 .flip div.back{
     background: url(http://img.over-blog-kiwi.com/0/99/11/05/20151129/ob_93cea4_01db607bf5047f404a0a699cb4c9b19ad9404f.jpg);
     z-index: 2;
@@ -564,6 +574,7 @@ svg{
 
 /* debut animation image participation*/
 
+
 .animation {
     height: 300px;
     width: 700px;
@@ -594,6 +605,7 @@ footer{
     padding: 15px;
     bottom:0px;
 }
+
 
 /* Fin footer */
 
@@ -679,7 +691,6 @@ html .login_page {
     height: 1000px;
     width: 980%;
     background-repeat: no-repeat;
-
 }
 
 .platimage {
@@ -709,3 +720,4 @@ html .login_page {
 .date__dot {
     padding-top: 20px;
 }
+
