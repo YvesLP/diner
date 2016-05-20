@@ -6,6 +6,18 @@
 {#{% trans_default_domain 'UtilBundle' %}#}
 
 {% block fos_user_content %}
+
+    <div class="nav_header" xmlns="http://www.w3.org/1999/html">
+        <nav>
+            <ul class="black">
+                <li><a href="{{ path("homepage") }}" title="Télécharger">Accueil</a></li>
+                <li><a href="{{ path("plat_index") }}" title="Télécharger">Plat</a></li>
+                <li><a href="{{ path("soiree_index") }}" title="Télécharger">Soiree</a></li>
+                <li><a href="{{ path("participation_index") }}" title="Télécharger">Participation</a></li>
+            </ul>
+        </nav>
+    </div>
+
     {% if error %}
         <div class="alert-mess row">
             <div class="alert alert-danger col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
