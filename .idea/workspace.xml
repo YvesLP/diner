@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87925427-e017-42ff-ab65-52544cf12750" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UtilBundle/Resources/views/translations/FOSUserBundle.fr.yml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/default/login.html.twig" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Controller/SoireeController.php" afterPath="$PROJECT_DIR$/src/SoireeBundle/Controller/SoireeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Repository/ParticipationRepository.php" afterPath="$PROJECT_DIR$/src/SoireeBundle/Repository/ParticipationRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SoireeBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/SoireeBundle/Resources/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UtilBundle/Resources/views/Registration/register.html.twig" afterPath="$PROJECT_DIR$/src/UtilBundle/Resources/views/Registration/register.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UtilBundle/Resources/views/Registration/register_content.html.twig" afterPath="$PROJECT_DIR$/src/UtilBundle/Resources/views/Registration/register_content.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UtilBundle/Resources/views/Security/login.html.twig" afterPath="$PROJECT_DIR$/src/UtilBundle/Resources/views/Security/login.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UtilBundle/UtilBundle.php" afterPath="$PROJECT_DIR$/src/UtilBundle/UtilBundle.php" />
-    </list>
+    <list default="true" id="87925427-e017-42ff-ab65-52544cf12750" name="Default" comment="" />
     <ignored path="diner.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -441,12 +427,12 @@
       <workItem from="1463664222949" duration="234000" />
       <workItem from="1463666435230" duration="4513000" />
       <workItem from="1463670965859" duration="3938000" />
-      <workItem from="1463729103219" duration="2476000" />
+      <workItem from="1463729103219" duration="2625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182555000" />
+    <option name="totallyTimeSpent" value="182704000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -588,13 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -873,6 +852,14 @@
           <folding>
             <element signature="e#149#202#0#Twig" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
